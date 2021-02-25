@@ -10,16 +10,18 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class Form6 : Form
     {
-        public Form1()
+        public Form6()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            Form1 form1 = new Form1();
+            form1.Show();
+            Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -38,10 +40,9 @@ namespace WindowsFormsApp1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form6 form6 = new Form6();
-            form6.Show();
-            Hide();
+            
         }
+
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -50,7 +51,4 @@ namespace WindowsFormsApp1
             Hide();
         }
     }
-
-     
-    
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class Form1
+    partial class Form6
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -29,31 +29,23 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.vacationBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.proektDataSet = new WindowsFormsApp1.proektDataSet();
-            this.vacationTableAdapter = new WindowsFormsApp1.proektDataSetTableAdapters.VacationTableAdapter();
             this.button6 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.vacationBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.Location = new System.Drawing.Point(52, 97);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "Входящие";
-            this.button1.UseVisualStyleBackColor = false;
+            this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
@@ -78,17 +70,18 @@ namespace WindowsFormsApp1
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.button4.Location = new System.Drawing.Point(52, 250);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 3;
             this.button4.Text = "Черновики";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(114, 12);
+            this.button5.Location = new System.Drawing.Point(115, 12);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(146, 23);
             this.button5.TabIndex = 4;
@@ -106,31 +99,17 @@ namespace WindowsFormsApp1
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Очистить";
             // 
-            // vacationBindingSource
-            // 
-            this.vacationBindingSource.DataMember = "Vacation";
-            this.vacationBindingSource.DataSource = this.proektDataSet;
-            // 
-            // proektDataSet
-            // 
-            this.proektDataSet.DataSetName = "proektDataSet";
-            this.proektDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vacationTableAdapter
-            // 
-            this.vacationTableAdapter.ClearBeforeFill = true;
-            // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button6.BackgroundImage = global::WindowsFormsApp1.Properties.Resources._1234;
-            this.button6.Location = new System.Drawing.Point(2, 2);
+            this.button6.Location = new System.Drawing.Point(3, 3);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(57, 58);
-            this.button6.TabIndex = 6;
+            this.button6.TabIndex = 7;
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // Form1
+            // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -142,11 +121,8 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Name = "Form6";
             this.Text = "Form1";
-            
-            ((System.ComponentModel.ISupportInitialize)(this.vacationBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,9 +137,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button button6;
-        private proektDataSet proektDataSet;
-        private System.Windows.Forms.BindingSource vacationBindingSource;
-        private proektDataSetTableAdapters.VacationTableAdapter vacationTableAdapter;
     }
 }
 

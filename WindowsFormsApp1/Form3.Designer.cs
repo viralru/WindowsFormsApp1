@@ -60,12 +60,13 @@ namespace WindowsFormsApp1
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.button3.Location = new System.Drawing.Point(52, 198);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 2;
             this.button3.Text = "Корзина";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
@@ -100,14 +101,15 @@ namespace WindowsFormsApp1
             // 
             // button6
             // 
-            this.button6.BackgroundImage = global::WindowsFormsApp1.Properties.Resources._123;
-            this.button6.Location = new System.Drawing.Point(2, 2);
+            this.button6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button6.BackgroundImage = global::WindowsFormsApp1.Properties.Resources._1234;
+            this.button6.Location = new System.Drawing.Point(2, 3);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(107, 89);
-            this.button6.TabIndex = 6;
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Size = new System.Drawing.Size(57, 58);
+            this.button6.TabIndex = 7;
+            this.button6.UseVisualStyleBackColor = false;
             // 
-            // Form1
+            // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -119,7 +121,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Name = "Form3";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
