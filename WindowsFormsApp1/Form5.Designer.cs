@@ -31,6 +31,8 @@ namespace WindowsFormsApp1
         {
             this.components = new System.ComponentModel.Container();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.workersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.proektDataSet1 = new WindowsFormsApp1.proektDataSet1();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -41,22 +43,22 @@ namespace WindowsFormsApp1
             this.vacationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vacationTableAdapter = new WindowsFormsApp1.proektDataSetTableAdapters.VacationTableAdapter();
             this.proektDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.proektDataSet1 = new WindowsFormsApp1.proektDataSet1();
             this.vacationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vacationsTableAdapter = new WindowsFormsApp1.proektDataSet1TableAdapters.VacationsTableAdapter();
-            this.workersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.workersTableAdapter = new WindowsFormsApp1.proektDataSet1TableAdapters.WorkersTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.button5 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vacationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSetBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vacationsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -69,7 +71,16 @@ namespace WindowsFormsApp1
             this.comboBox1.Size = new System.Drawing.Size(147, 21);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.ValueMember = "FirstName";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // workersBindingSource
+            // 
+            this.workersBindingSource.DataMember = "Workers";
+            this.workersBindingSource.DataSource = this.proektDataSet1;
+            // 
+            // proektDataSet1
+            // 
+            this.proektDataSet1.DataSetName = "proektDataSet1";
+            this.proektDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -139,11 +150,6 @@ namespace WindowsFormsApp1
             this.proektDataSetBindingSource1.DataSource = this.proektDataSet;
             this.proektDataSetBindingSource1.Position = 0;
             // 
-            // proektDataSet1
-            // 
-            this.proektDataSet1.DataSetName = "proektDataSet1";
-            this.proektDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // vacationsBindingSource
             // 
             this.vacationsBindingSource.DataMember = "Vacations";
@@ -152,11 +158,6 @@ namespace WindowsFormsApp1
             // vacationsTableAdapter
             // 
             this.vacationsTableAdapter.ClearBeforeFill = true;
-            // 
-            // workersBindingSource
-            // 
-            this.workersBindingSource.DataMember = "Workers";
-            this.workersBindingSource.DataSource = this.proektDataSet1;
             // 
             // workersTableAdapter
             // 
@@ -202,11 +203,26 @@ namespace WindowsFormsApp1
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(61, 61);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(130, 23);
+            this.button5.TabIndex = 14;
+            this.button5.Text = "Выбрать файл";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -220,13 +236,13 @@ namespace WindowsFormsApp1
             this.Name = "Form5";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form5_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vacationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSetBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vacationsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,6 +270,8 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button button5;
     }
 }
 

@@ -22,10 +22,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void Form5_Load(object sender, EventArgs e)
         {
@@ -57,6 +54,12 @@ namespace WindowsFormsApp1
 
         private void button4_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
 
         }
     }

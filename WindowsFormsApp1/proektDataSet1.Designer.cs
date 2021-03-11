@@ -2915,10 +2915,10 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public WorkersRow AddWorkersRow(int id, string LastName, string FirstName, string MiddleName, string Department, string Position, string Login, string Password, bool IsActive, AccessGroupsRow parentAccessGroupsRowByFK_Workers_AccessGroups, SignsRow parentSignsRowByFK_Workers_Signs) {
+            public WorkersRow AddWorkersRow(string LastName, string FirstName, string MiddleName, string Department, string Position, string Login, string Password, bool IsActive, AccessGroupsRow parentAccessGroupsRowByFK_Workers_AccessGroups, SignsRow parentSignsRowByFK_Workers_Signs) {
                 WorkersRow rowWorkersRow = ((WorkersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        id,
+                        null,
                         LastName,
                         FirstName,
                         MiddleName,
@@ -3004,6 +3004,8 @@ namespace WindowsFormsApp1 {
                 base.Columns.Add(this.columnid_Sign);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
+                this.columnid.AutoIncrement = true;
+                this.columnid.AutoIncrementSeed = 1;
                 this.columnid.AllowDBNull = false;
                 this.columnid.Unique = true;
                 this.columnLastName.MaxLength = 10;
@@ -7868,8 +7870,13 @@ SELECT id, LastName, FirstName, MiddleName, Department, Position, Login, Passwor
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, string Original_LastName, string Original_FirstName, string Original_MiddleName, string Original_Department, string Original_Position, string Original_Login, string Original_Password, global::System.Nullable<bool> Original_IsActive, global::System.Nullable<int> Original_id_AccessGroup, global::System.Nullable<int> Original_id_Sign) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
+        public virtual int Delete(global::System.Nullable<int> Original_id, string Original_LastName, string Original_FirstName, string Original_MiddleName, string Original_Department, string Original_Position, string Original_Login, string Original_Password, global::System.Nullable<bool> Original_IsActive, global::System.Nullable<int> Original_id_AccessGroup, global::System.Nullable<int> Original_id_Sign) {
+            if ((Original_id.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             if ((Original_LastName == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -7970,8 +7977,13 @@ SELECT id, LastName, FirstName, MiddleName, Department, Position, Login, Passwor
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int id, string LastName, string FirstName, string MiddleName, string Department, string Position, string Login, string Password, global::System.Nullable<bool> IsActive, global::System.Nullable<int> id_AccessGroup, global::System.Nullable<int> id_Sign) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id));
+        public virtual int Insert(global::System.Nullable<int> id, string LastName, string FirstName, string MiddleName, string Department, string Position, string Login, string Password, global::System.Nullable<bool> IsActive, global::System.Nullable<int> id_AccessGroup, global::System.Nullable<int> id_Sign) {
+            if ((id.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             if ((LastName == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -8053,7 +8065,7 @@ SELECT id, LastName, FirstName, MiddleName, Department, Position, Login, Passwor
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    int id, 
+                    global::System.Nullable<int> id, 
                     string LastName, 
                     string FirstName, 
                     string MiddleName, 
@@ -8064,7 +8076,7 @@ SELECT id, LastName, FirstName, MiddleName, Department, Position, Login, Passwor
                     global::System.Nullable<bool> IsActive, 
                     global::System.Nullable<int> id_AccessGroup, 
                     global::System.Nullable<int> id_Sign, 
-                    int Original_id, 
+                    global::System.Nullable<int> Original_id, 
                     string Original_LastName, 
                     string Original_FirstName, 
                     string Original_MiddleName, 
@@ -8075,7 +8087,12 @@ SELECT id, LastName, FirstName, MiddleName, Department, Position, Login, Passwor
                     global::System.Nullable<bool> Original_IsActive, 
                     global::System.Nullable<int> Original_id_AccessGroup, 
                     global::System.Nullable<int> Original_id_Sign) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id));
+            if ((id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             if ((LastName == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -8136,7 +8153,12 @@ SELECT id, LastName, FirstName, MiddleName, Department, Position, Login, Passwor
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_id));
+            if ((Original_id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_id.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
             if ((Original_LastName == null)) {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
@@ -8248,7 +8270,7 @@ SELECT id, LastName, FirstName, MiddleName, Department, Position, Login, Passwor
                     global::System.Nullable<bool> IsActive, 
                     global::System.Nullable<int> id_AccessGroup, 
                     global::System.Nullable<int> id_Sign, 
-                    int Original_id, 
+                    global::System.Nullable<int> Original_id, 
                     string Original_LastName, 
                     string Original_FirstName, 
                     string Original_MiddleName, 

@@ -49,6 +49,34 @@ namespace WindowsFormsApp1
             form5.Show();
             Hide();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Form8 form8 = new Form8();
+            form8.Show();
+            Hide();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form10 form10 = new Form10();
+            form10.Show();
+            Hide();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Form9 form9 = new Form9();
+            form9.Show();
+            Hide();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Form11 form11 = new Form11();
+            form11.Show();
+            Hide();
+        }
     }
 
      

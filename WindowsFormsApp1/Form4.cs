@@ -53,6 +53,13 @@ namespace WindowsFormsApp1
             form5.Show();
             Hide();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form10 form10 = new Form10();
+            form10.Show();
+            Hide();
+        }
     }
     }
 
