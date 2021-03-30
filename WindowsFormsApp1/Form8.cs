@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "proektDataSet2.Workers". При необходимости она может быть перемещена или удалена.
             this.workersTableAdapter1.Fill(this.proektDataSet2.Workers);
-         
+         //1
 
         }
 
