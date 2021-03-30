@@ -40,15 +40,35 @@ namespace WindowsFormsApp1
             this.tableAdapterManager = new WindowsFormsApp1.proektDataSet1TableAdapters.TableAdapterManager();
             this.loginTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             loginLabel = new System.Windows.Forms.Label();
             passwordLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // loginLabel
+            // 
+            loginLabel.AutoSize = true;
+            loginLabel.Location = new System.Drawing.Point(52, 61);
+            loginLabel.Name = "loginLabel";
+            loginLabel.Size = new System.Drawing.Size(36, 13);
+            loginLabel.TabIndex = 6;
+            loginLabel.Text = "Login:";
+            // 
+            // passwordLabel
+            // 
+            passwordLabel.AutoSize = true;
+            passwordLabel.Location = new System.Drawing.Point(52, 112);
+            passwordLabel.Name = "passwordLabel";
+            passwordLabel.Size = new System.Drawing.Size(56, 13);
+            passwordLabel.TabIndex = 7;
+            passwordLabel.Text = "Password:";
+            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(192, 173);
+            this.button1.Location = new System.Drawing.Point(221, 173);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -65,6 +85,7 @@ namespace WindowsFormsApp1
             this.linkLabel1.TabIndex = 3;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Забыли пароль?";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // proektDataSet1
             // 
@@ -93,15 +114,6 @@ namespace WindowsFormsApp1
             this.tableAdapterManager.VacationsTableAdapter = null;
             this.tableAdapterManager.WorkersTableAdapter = this.workersTableAdapter;
             // 
-            // loginLabel
-            // 
-            loginLabel.AutoSize = true;
-            loginLabel.Location = new System.Drawing.Point(52, 61);
-            loginLabel.Name = "loginLabel";
-            loginLabel.Size = new System.Drawing.Size(36, 13);
-            loginLabel.TabIndex = 6;
-            loginLabel.Text = "Login:";
-            // 
             // loginTextBox
             // 
             this.loginTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.workersBindingSource, "Login", true));
@@ -111,15 +123,6 @@ namespace WindowsFormsApp1
             this.loginTextBox.TabIndex = 7;
             this.loginTextBox.TextChanged += new System.EventHandler(this.loginTextBox_TextChanged);
             // 
-            // passwordLabel
-            // 
-            passwordLabel.AutoSize = true;
-            passwordLabel.Location = new System.Drawing.Point(52, 112);
-            passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new System.Drawing.Size(56, 13);
-            passwordLabel.TabIndex = 7;
-            passwordLabel.Text = "Password:";
-            // 
             // passwordTextBox
             // 
             this.passwordTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.workersBindingSource, "Password", true));
@@ -128,11 +131,32 @@ namespace WindowsFormsApp1
             this.passwordTextBox.Size = new System.Drawing.Size(305, 20);
             this.passwordTextBox.TabIndex = 8;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(248, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(261, 23);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Регистрация";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(126, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Вход";
+            // 
             // Form9
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(511, 245);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button2);
             this.Controls.Add(passwordLabel);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(loginLabel);
@@ -158,5 +182,7 @@ namespace WindowsFormsApp1
         private proektDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TextBox loginTextBox;
         private System.Windows.Forms.TextBox passwordTextBox;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label1;
     }
 }

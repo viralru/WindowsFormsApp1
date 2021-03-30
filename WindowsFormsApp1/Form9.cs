@@ -37,11 +37,23 @@ namespace WindowsFormsApp1
         private void Form9_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "proektDataSet1.Workers". При необходимости она может быть перемещена или удалена.
-            this.workersTableAdapter.Fill(this.proektDataSet1.Workers);
+            //this.workersTableAdapter.Fill(this.proektDataSet1.Workers);
 
         }
 
         private void loginTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form11 form11 = new Form11();
+            form11.Show();
+            Hide();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
         }

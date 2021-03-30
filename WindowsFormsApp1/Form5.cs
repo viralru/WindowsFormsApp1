@@ -27,15 +27,16 @@ namespace WindowsFormsApp1
         private void Form5_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "proektDataSet1.Workers". При необходимости она может быть перемещена или удалена.
-            this.workersTableAdapter.Fill(this.proektDataSet1.Workers);
+            //this.workersTableAdapter.Fill(this.proektDataSet1.Workers);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "proektDataSet1.Vacations". При необходимости она может быть перемещена или удалена.
-            this.vacationsTableAdapter.Fill(this.proektDataSet1.Vacations);
+            //this.vacationsTableAdapter.Fill(this.proektDataSet1.Vacations);
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Controls.Add(new ComboBox() { Location = new Point(545, 100), Width = 150, Height = 21 });
+            this.Controls.Add(new ComboBox() { Location = new Point(545, 100), Width = 145, Height = 21 });
+            this.Controls.Add(new Button() { Location = new Point(700, 100), Width = 24, Height = 24, BackgroundImage = global::WindowsFormsApp1.Properties.Resources.adduser1}); //, BackgroundImageLayout
         }
 
         private void button2_Click(object sender, EventArgs e)

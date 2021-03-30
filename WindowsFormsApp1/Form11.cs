@@ -37,9 +37,39 @@ namespace WindowsFormsApp1
             workersBindingSource.AddNew();
             workersBindingSource.EndEdit();
             workersTableAdapter.Update(proektDataSet1);
+            Form1 form1 = new Form1();
+            form1.Show();
+            Hide();
 
         }
 
-       
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form9 form9 = new Form9();
+            form9.Show();
+            Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form9 form9 = new Form9();
+            form9.Show();
+            Hide();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
