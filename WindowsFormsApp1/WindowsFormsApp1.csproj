@@ -151,10 +151,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>proektDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="proektDataSet1.cs">
+      <DependentUpon>proektDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="proektDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>proektDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="proektDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>proektDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -222,6 +230,17 @@
     </None>
     <None Include="proektDataSet1.xss">
       <DependentUpon>proektDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="proektDataSet2.xsc">
+      <DependentUpon>proektDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="proektDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>proektDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="proektDataSet2.xss">
+      <DependentUpon>proektDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

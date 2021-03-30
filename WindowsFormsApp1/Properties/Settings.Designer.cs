@@ -32,5 +32,16 @@ namespace WindowsFormsApp1.Properties {
                 return ((string)(this["proektConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-JU8HL42\\ECPSERVER;Initial Catalog=proekt;Integrated Security=" +
+            "True")]
+        public string ECPServer {
+            get {
+                return ((string)(this["ECPServer"]));
+            }
+        }
     }
 }
