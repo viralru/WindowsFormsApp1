@@ -74,6 +74,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DB.cs" />
     <Compile Include="Form10.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +159,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>proektDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="proektDataSet2.cs">
+      <DependentUpon>proektDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="proektDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>

@@ -265,6 +265,7 @@ namespace WindowsFormsApp1
             this.lastNameComboBox.Name = "lastNameComboBox";
             this.lastNameComboBox.Size = new System.Drawing.Size(121, 21);
             this.lastNameComboBox.TabIndex = 22;
+            this.lastNameComboBox.SelectedIndexChanged += new System.EventHandler(this.lastNameComboBox_SelectedIndexChanged);
             // 
             // lastNameTextBox
             // 
@@ -352,7 +353,7 @@ namespace WindowsFormsApp1
             this.fillByToolStripButton});
             this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
             this.fillByToolStrip.Name = "fillByToolStrip";
-            this.fillByToolStrip.Size = new System.Drawing.Size(111, 25);
+            this.fillByToolStrip.Size = new System.Drawing.Size(800, 25);
             this.fillByToolStrip.TabIndex = 30;
             this.fillByToolStrip.Text = "fillByToolStrip";
             // 

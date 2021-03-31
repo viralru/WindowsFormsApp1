@@ -582,6 +582,22 @@ SELECT id, LastName, FirstName, MiddleName, Department, Position, Login, Passwor
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
+              <DbSource ConnectionRef="ECPServer (Settings)" DbObjectName="proekt.dbo.Workers" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetLogin" Modifier="Public" Name="GetLogin" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="GetLogin">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT login FROM Workers</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ECPServer (Settings)" DbObjectName="proekt.dbo.Workers" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Login" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Login" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="Login">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT id, Login, Password FROM dbo.Workers</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
             </Sources>
           </TableAdapter>
         </Tables>
