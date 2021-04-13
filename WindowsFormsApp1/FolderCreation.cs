@@ -10,24 +10,20 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form7 : Form
+    public partial class FolderCreation : Form
     {
-        public Form7()
+        public FolderCreation()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-            form1.Show();
-            Hide();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form5 form5 = new Form5();
-            form5.Show();
             Hide();
         }
     }

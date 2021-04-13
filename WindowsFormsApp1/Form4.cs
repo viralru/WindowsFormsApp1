@@ -60,6 +60,19 @@ namespace WindowsFormsApp1
             form10.Show();
             Hide();
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FolderCreation formcreationfolder = new FolderCreation();
+            formcreationfolder.Show();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Form9 form9 = new Form9();
+            form9.Show();
+            Hide();
+        }
     }
     }
 
