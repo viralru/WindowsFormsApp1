@@ -63,5 +63,10 @@ namespace WindowsFormsApp1
             openFileDialog1.ShowDialog();
 
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

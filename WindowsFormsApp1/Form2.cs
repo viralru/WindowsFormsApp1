@@ -61,8 +61,8 @@ namespace WindowsFormsApp1
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FolderCreation formcreationfolder = new FolderCreation();
-            formcreationfolder.Show();
+            //FolderCreation formcreationfolder = new FolderCreation();
+            //formcreationfolder.Show();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
