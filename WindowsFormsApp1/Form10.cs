@@ -33,7 +33,7 @@ namespace WindowsFormsApp1
         private void Form10_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "proektDataSet1.Workers". При необходимости она может быть перемещена или удалена.
-            //this.workersTableAdapter.Fill(this.proektDataSet1.Workers);
+            
 
         }
 
@@ -44,11 +44,17 @@ namespace WindowsFormsApp1
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-            form1.Show();
-            Hide();
+            try
+            {
+                this.workersTableAdapter1.FillBy(this.proektDataSet2.Workers);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

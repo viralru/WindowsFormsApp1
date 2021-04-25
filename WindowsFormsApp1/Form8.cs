@@ -19,10 +19,14 @@ namespace WindowsFormsApp1
 
         private void Form8_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "proektDataSet1.Vacations". При необходимости она может быть перемещена или удалена.
-            this.vacationsTableAdapter.Fill(this.proektDataSet1.Vacations);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "proektDataSet1.Workers". При необходимости она может быть перемещена или удалена.
-            this.workersTableAdapter.Fill(this.proektDataSet1.Workers);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "proektDataSet2.Workers". При необходимости она может быть перемещена или удалена.
+            this.workersTableAdapter1.Fill(this.proektDataSet2.Workers);
+         
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

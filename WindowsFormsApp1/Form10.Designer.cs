@@ -59,8 +59,11 @@ namespace WindowsFormsApp1
             this.positionTextBox = new System.Windows.Forms.TextBox();
             this.loginTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.proektDataSet2 = new WindowsFormsApp1.proektDataSet2();
+            this.workersTableAdapter1 = new WindowsFormsApp1.proektDataSet2TableAdapters.WorkersTableAdapter();
+            this.tableAdapterManager1 = new WindowsFormsApp1.proektDataSet2TableAdapters.TableAdapterManager();
+            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
+            this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
             lastNameLabel = new System.Windows.Forms.Label();
             firstNameLabel = new System.Windows.Forms.Label();
             middleNameLabel = new System.Windows.Forms.Label();
@@ -70,6 +73,8 @@ namespace WindowsFormsApp1
             passwordLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet2)).BeginInit();
+            this.fillByToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // lastNameLabel
@@ -319,32 +324,52 @@ namespace WindowsFormsApp1
             this.passwordTextBox.Size = new System.Drawing.Size(100, 20);
             this.passwordTextBox.TabIndex = 29;
             // 
-            // button1
+            // proektDataSet2
             // 
-            this.button1.Location = new System.Drawing.Point(123, 397);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "Назад";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.proektDataSet2.DataSetName = "proektDataSet2";
+            this.proektDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // button2
+            // workersTableAdapter1
             // 
-            this.button2.Location = new System.Drawing.Point(236, 397);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 31;
-            this.button2.Text = "Сохранить";
-            this.button2.UseVisualStyleBackColor = true;
+            this.workersTableAdapter1.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.AccessGroupsTableAdapter = null;
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.DocumentsTableAdapter = null;
+            this.tableAdapterManager1.LettersOfWorkersTableAdapter = null;
+            this.tableAdapterManager1.LettersTableAdapter = null;
+            this.tableAdapterManager1.LetterStatusTableAdapter = null;
+            this.tableAdapterManager1.SignsTableAdapter = null;
+            this.tableAdapterManager1.UpdateOrder = WindowsFormsApp1.proektDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager1.VacationsTableAdapter = null;
+            this.tableAdapterManager1.WorkersTableAdapter = this.workersTableAdapter1;
+            // 
+            // fillByToolStrip
+            // 
+            this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fillByToolStripButton});
+            this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.fillByToolStrip.Name = "fillByToolStrip";
+            this.fillByToolStrip.Size = new System.Drawing.Size(111, 25);
+            this.fillByToolStrip.TabIndex = 30;
+            this.fillByToolStrip.Text = "fillByToolStrip";
+            // 
+            // fillByToolStripButton
+            // 
+            this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.fillByToolStripButton.Name = "fillByToolStripButton";
+            this.fillByToolStripButton.Size = new System.Drawing.Size(39, 22);
+            this.fillByToolStripButton.Text = "FillBy";
+            this.fillByToolStripButton.Click += new System.EventHandler(this.fillByToolStripButton_Click);
             // 
             // Form10
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(passwordLabel);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(loginLabel);
@@ -375,6 +400,9 @@ namespace WindowsFormsApp1
             this.Load += new System.EventHandler(this.Form10_Load);
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet2)).EndInit();
+            this.fillByToolStrip.ResumeLayout(false);
+            this.fillByToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -404,7 +432,10 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox positionTextBox;
         private System.Windows.Forms.TextBox loginTextBox;
         private System.Windows.Forms.TextBox passwordTextBox;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private proektDataSet2 proektDataSet2;
+        private proektDataSet2TableAdapters.WorkersTableAdapter workersTableAdapter1;
+        private proektDataSet2TableAdapters.TableAdapterManager tableAdapterManager1;
+        private System.Windows.Forms.ToolStrip fillByToolStrip;
+        private System.Windows.Forms.ToolStripButton fillByToolStripButton;
     }
 }
