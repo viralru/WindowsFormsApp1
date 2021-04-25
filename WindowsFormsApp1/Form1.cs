@@ -7,14 +7,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+        public void SetLogin()
+        {
+            string UserLogin = this.textBox1.Text;
+        }
         public Form1()
         {
             InitializeComponent();
+                String Login = "123";
+                String Pass = "125";
+                DB db = new DB();
+                DataTable table = new DataTable();
+
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                SqlCommand command = new SqlCommand("Select * from Workers where Login = @UL AND Password = @UP", db.GetConnection());
+                command.Parameters.Add("@UL", SqlDbType.VarChar).Value = Login;
+                command.Parameters.Add("@UP", SqlDbType.VarChar).Value = Pass;
+                adapter.SelectCommand = command;
+                adapter.Fill(table);
+                string text = table.Rows[0][1].ToString();
+                tableLayoutPanel1.Controls.Add(new Label { Text = text });
+                tableLayoutPanel1.Controls.Add(new Label { Text = text });
+                textBox1.Text = ClientSession.UserName;
+
+           
+          
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -119,6 +143,11 @@ namespace WindowsFormsApp1
             Form9 form9 = new Form9();
             form9.Show();
             Hide();
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 
