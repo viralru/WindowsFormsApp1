@@ -202,7 +202,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.button1);
             this.Name = "Form9";
-            this.Text = " ";
+            this.Text = " Вход";
             this.Load += new System.EventHandler(this.Form9_Load);
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).EndInit();

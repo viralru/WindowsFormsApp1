@@ -19,14 +19,24 @@ namespace WindowsFormsApp1
             DB db = new DB();
             DataTable table = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter();
-            SqlCommand command = new SqlCommand("Select FirstName,LastName from Workers", db.GetConnection());
+            SqlCommand command = new SqlCommand("Select id,FirstName,LastName from Workers", db.GetConnection());
             adapter.SelectCommand = command;
             adapter.Fill(table);
-            string text = table.Rows[0][1].ToString();
-            comboBox1.Items.Add(text);
-
+            int Rowscount = table.Rows.Count;
+            if (Rowscount != 0)
+            {
+                for (int i = 0; i < Rowscount; i++)
+                {
+                    string id = table.Rows[i][0].ToString();
+                    string FirstName = table.Rows[i][1].ToString();
+                    string LastName = table.Rows[i][2].ToString();
+                    string Text = FirstName + " " + LastName;
+                    comboBox1.Items.Add(Text);
+                    
+                    
+                }
+            }
         }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -78,19 +88,27 @@ namespace WindowsFormsApp1
             adapter.SelectCommand = searchID;
             adapter.Fill(table);
             NewID = table.Rows.Count + 1;
-            SqlCommand command = new SqlCommand("INSERT INTO Letters(id, id_Sender, id_recipient) VALUES(@UID, @USender, @URecipient)", db.GetConnection());
+            int id_recip = comboBox1.SelectedIndex + 1;
+            SqlCommand command = new SqlCommand("INSERT INTO Letters(id, id_Sender, id_recipient,SendDate,SendTime,id_status,Theme,Comment) VALUES(@UID, @USender, @URecipient,@UDate,@UTime,@UStatus,@UTheme,@UComment)", db.GetConnection());
             command.Parameters.Add("@UID", SqlDbType.Int).Value = NewID;
-            command.Parameters.Add("@USender", SqlDbType.Int).Value = "1";
-            command.Parameters.Add("@URecipient", SqlDbType.Int).Value = "2";
+            command.Parameters.Add("@USender", SqlDbType.Int).Value = Convert.ToInt32(ClientSession.iduser);
+            command.Parameters.Add("@URecipient", SqlDbType.Int).Value = Convert.ToInt32(id_recip);
+            command.Parameters.Add("@UTheme", SqlDbType.VarChar).Value = richTextBox1.Text;
+            command.Parameters.Add("@UStatus", SqlDbType.Int).Value = "1";
+            command.Parameters.Add("@UComment", SqlDbType.VarChar).Value = richTextBox2.Text;
+            command.Parameters.Add("@UDate", SqlDbType.Date).Value = DateTime.Now.ToString("dd MMMM yyyy");
+            command.Parameters.Add("@UTime", SqlDbType.Time).Value = DateTime.Now.ToString("HH:mm:ss");
+            command.Parameters.Add("@UWritten", SqlDbType.Bit).Value = false;
+
             adapter.SelectCommand = command;
             adapter.Fill(table);
             // подумать о генерации ключа
-            SqlCommand command1 = new SqlCommand("INSERT INTO LettersOfWorkers(id, id_letter, id_worker) VALUES(@UID, @UID, @URecipient)", db.GetConnection());
+            /*SqlCommand command1 = new SqlCommand("INSERT INTO LettersOfWorkers(id, id_letter, id_worker) VALUES(@UID, @UID, @URecipient)", db.GetConnection());
             command1.Parameters.Add("@UID", SqlDbType.Int).Value = NewID;
-            command1.Parameters.Add("@USender", SqlDbType.Int).Value = "1";
-            command1.Parameters.Add("@URecipient", SqlDbType.Int).Value = "2";
+            command1.Parameters.Add("@USender", SqlDbType.Int).Value = Convert.ToInt32(ClientSession.iduser);
+            command1.Parameters.Add("@URecipient", SqlDbType.Int).Value = Convert.ToInt32(id_recip);
             adapter.SelectCommand = command1;
-            adapter.Fill(table1);
+            adapter.Fill(table1);*/
 
         }
 

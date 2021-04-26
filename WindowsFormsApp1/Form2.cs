@@ -27,16 +27,53 @@ namespace WindowsFormsApp1
             adapter.Fill(table);
             int Rowscount = table.Rows.Count;
             tableLayoutPanel1.RowCount = Rowscount;
+
             if (Rowscount != 0)
-                for (int i = 1; i < Rowscount; i++)
+                for (int i = 0; i < Rowscount; i++)
                 {
-                string theme = table.Rows[i][8].ToString();
-                string themenospaces = theme.Replace(" ", "");
-                string comment = table.Rows[i][9].ToString();
-                string commentnospaces = comment.Replace(" ", "");
-                tableLayoutPanel1.Controls.Add(new Label { Text = themenospaces + "\r\n" + commentnospaces, Size = new Size(50, 50) });
+                    string theme = table.Rows[i][8].ToString();
+                    string themenospaces = theme.Replace(" ", "");
+                    string comment = table.Rows[i][9].ToString();
+                    string commentnospaces = comment.Replace(" ", "");
+                    string id_Sender = table.Rows[i][1].ToString();
+                    string id_status = table.Rows[i][10].ToString();
+                    string statusSigned = table.Rows[i][7].ToString();
+                    string id = table.Rows[i][0].ToString();
+              
+                 
+
+
+                    SqlCommand newcommand = new SqlCommand("Select * from Workers where id = @UIDU", db.GetConnection());
+                    newcommand.Parameters.Add("@UIDU", SqlDbType.VarChar).Value = id_Sender;
+                    DataTable table2 = new DataTable();
+                    adapter.SelectCommand = newcommand;
+                    adapter.Fill(table2);
+
+                    string ShortUserName = table2.Rows[0][2].ToString();
+
+                    tableLayoutPanel1.Controls.Add(new LinkLabel { Text = themenospaces + "\r\n" + "\r\n" + ShortUserName + "\r\n" + commentnospaces, Name = "LinkClick" + id, Tag = i, Size = new Size(80, 80) }); ;
+                    tableLayoutPanel1.Controls.Add(new Button { Name = "buttonclick" + id });
+                    
+
+
+
+
+
+                    if (statusSigned == "2")
+                    {
+                        bool Signed = true;
+                        tableLayoutPanel1.Controls.Add(new CheckBox { Checked = Signed });
+                    }
+                    else
+                    {
+                        bool Signed = false;
+                        tableLayoutPanel1.Controls.Add(new CheckBox { Checked = Signed });
+                    }
+
+
 
                 }
+
 
         }
 
