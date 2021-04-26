@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
@@ -15,7 +16,19 @@ namespace WindowsFormsApp1
         public Form2()
         {
             InitializeComponent();
-            
+            String userid = ClientSession.iduser;
+            DB db = new DB();
+            DataTable table = new DataTable();
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            SqlCommand command = new SqlCommand("Select * from Letters where id_Sender LIKE @UID", db.GetConnection());
+            command.Parameters.Add("@UID", SqlDbType.VarChar).Value = userid;
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+            int Rowscount = table.Rows.Count;
+            tableLayoutPanel1.RowCount = Rowscount;
+            //textBox1.Text = Rowscount.ToString();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -62,8 +75,8 @@ namespace WindowsFormsApp1
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //FolderCreation formcreationfolder = new FolderCreation();
-            //formcreationfolder.Show();
+            FolderCreation formcreationfolder = new FolderCreation();
+            formcreationfolder.Show();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

@@ -26,16 +26,23 @@ namespace WindowsFormsApp1
                 command.Parameters.Add("@UID", SqlDbType.VarChar).Value = userid;
                 adapter.SelectCommand = command;
                 adapter.Fill(table);
-                string theme = table.Rows[0][8].ToString();
-                string comment = table.Rows[0][9].ToString();
-                string themenospaces = theme.Replace(" ","");
-                string commentnospaces = comment.Replace(" ","");  
-                string text = themenospaces + "\r\n" + commentnospaces + "\r\n" + commentnospaces;
-                tableLayoutPanel1.Controls.Add(new Label { Text = text});
+                int Rowscount = table.Rows.Count;
+                tableLayoutPanel1.RowCount = 8;
+                //textBox1.Text = Rowscount.ToString();
 
 
 
+            for (int i = 1; i < Rowscount; i++)
+                 {
+                    string theme = table.Rows[i][8].ToString();
+                    string themenospaces = theme.Replace(" ", "");
+                    string comment = table.Rows[i][9].ToString();
+                    string commentnospaces = comment.Replace(" ", "");
+                    tableLayoutPanel1.Controls.Add(new Label { Text = themenospaces + "\r\n" + commentnospaces, Size = new Size(50,50)});
+                    
+            }
 
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
