@@ -27,7 +27,16 @@ namespace WindowsFormsApp1
             adapter.Fill(table);
             int Rowscount = table.Rows.Count;
             tableLayoutPanel1.RowCount = Rowscount;
-            //textBox1.Text = Rowscount.ToString();
+            if (Rowscount != 0)
+                for (int i = 1; i < Rowscount; i++)
+                {
+                string theme = table.Rows[i][8].ToString();
+                string themenospaces = theme.Replace(" ", "");
+                string comment = table.Rows[i][9].ToString();
+                string commentnospaces = comment.Replace(" ", "");
+                tableLayoutPanel1.Controls.Add(new Label { Text = themenospaces + "\r\n" + commentnospaces, Size = new Size(50, 50) });
+
+                }
 
         }
 
@@ -75,7 +84,7 @@ namespace WindowsFormsApp1
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FolderCreation formcreationfolder = new FolderCreation();
+            FolderCreationcs formcreationfolder = new FolderCreationcs();
             formcreationfolder.Show();
         }
 

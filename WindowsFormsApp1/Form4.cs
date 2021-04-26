@@ -63,7 +63,7 @@ namespace WindowsFormsApp1
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FolderCreation formcreationfolder = new FolderCreation();
+            FolderCreationcs formcreationfolder = new FolderCreationcs();
             formcreationfolder.Show();
         }
 
