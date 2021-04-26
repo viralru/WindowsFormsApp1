@@ -58,20 +58,20 @@ namespace WindowsFormsApp1
             // passwordLabel
             // 
             passwordLabel.AutoSize = true;
-            passwordLabel.Location = new System.Drawing.Point(52, 112);
+            passwordLabel.Location = new System.Drawing.Point(224, 115);
             passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new System.Drawing.Size(56, 13);
+            passwordLabel.Size = new System.Drawing.Size(45, 13);
             passwordLabel.TabIndex = 7;
-            passwordLabel.Text = "Password:";
+            passwordLabel.Text = "Пароль";
             // 
             // loginLabel1
             // 
             loginLabel1.AutoSize = true;
-            loginLabel1.Location = new System.Drawing.Point(72, 61);
+            loginLabel1.Location = new System.Drawing.Point(224, 58);
             loginLabel1.Name = "loginLabel1";
-            loginLabel1.Size = new System.Drawing.Size(36, 13);
+            loginLabel1.Size = new System.Drawing.Size(38, 13);
             loginLabel1.TabIndex = 9;
-            loginLabel1.Text = "Login:";
+            loginLabel1.Text = "Логин";
             // 
             // button1
             // 
@@ -86,12 +86,13 @@ namespace WindowsFormsApp1
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(282, 144);
+            this.linkLabel1.Location = new System.Drawing.Point(298, 154);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(91, 13);
             this.linkLabel1.TabIndex = 3;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Забыли пароль?";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // proektDataSet1
             // 
@@ -122,9 +123,10 @@ namespace WindowsFormsApp1
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(142, 109);
+            this.textBox2.Location = new System.Drawing.Point(111, 131);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.PasswordChar = '*';
+            this.textBox2.Size = new System.Drawing.Size(278, 20);
             this.textBox2.TabIndex = 9;
             // 
             // workersBindingSource1
@@ -160,9 +162,9 @@ namespace WindowsFormsApp1
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(142, 58);
+            this.textBox1.Location = new System.Drawing.Point(111, 74);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(278, 20);
             this.textBox1.TabIndex = 10;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -171,16 +173,16 @@ namespace WindowsFormsApp1
             this.button2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button2.Location = new System.Drawing.Point(-1, 0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(251, 23);
+            this.button2.Size = new System.Drawing.Size(268, 23);
             this.button2.TabIndex = 11;
             this.button2.Text = "Вход";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(256, 0);
+            this.button3.Location = new System.Drawing.Point(253, 0);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(254, 23);
+            this.button3.Size = new System.Drawing.Size(257, 23);
             this.button3.TabIndex = 12;
             this.button3.Text = "Регистрация";
             this.button3.UseVisualStyleBackColor = true;

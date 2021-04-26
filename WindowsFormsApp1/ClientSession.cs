@@ -9,5 +9,6 @@ namespace WindowsFormsApp1
     class ClientSession
     {
         public static string UserName;
+        public static string iduser;
     }
 }

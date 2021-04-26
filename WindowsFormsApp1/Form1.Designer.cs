@@ -40,9 +40,6 @@ namespace WindowsFormsApp1
             this.vacationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.proektDataSet = new WindowsFormsApp1.proektDataSet();
             this.vacationTableAdapter = new WindowsFormsApp1.proektDataSetTableAdapters.VacationTableAdapter();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -131,42 +128,6 @@ namespace WindowsFormsApp1
             // vacationTableAdapter
             // 
             this.vacationTableAdapter.ClearBeforeFill = true;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button7.Location = new System.Drawing.Point(194, 261);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "админ";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button8.Location = new System.Drawing.Point(194, 290);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "Логин";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button9.Location = new System.Drawing.Point(194, 319);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(94, 23);
-            this.button9.TabIndex = 9;
-            this.button9.Text = "Регистрация";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button6
             // 
@@ -282,9 +243,6 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.button5);
@@ -314,9 +272,6 @@ namespace WindowsFormsApp1
         private proektDataSet proektDataSet;
         private System.Windows.Forms.BindingSource vacationBindingSource;
         private proektDataSetTableAdapters.VacationTableAdapter vacationTableAdapter;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button11;

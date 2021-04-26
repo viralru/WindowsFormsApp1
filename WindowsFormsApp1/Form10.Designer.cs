@@ -62,8 +62,8 @@ namespace WindowsFormsApp1
             this.proektDataSet2 = new WindowsFormsApp1.proektDataSet2();
             this.workersTableAdapter1 = new WindowsFormsApp1.proektDataSet2TableAdapters.WorkersTableAdapter();
             this.tableAdapterManager1 = new WindowsFormsApp1.proektDataSet2TableAdapters.TableAdapterManager();
-            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
-            this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             lastNameLabel = new System.Windows.Forms.Label();
             firstNameLabel = new System.Windows.Forms.Label();
             middleNameLabel = new System.Windows.Forms.Label();
@@ -74,7 +74,6 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSet2)).BeginInit();
-            this.fillByToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // lastNameLabel
@@ -82,63 +81,63 @@ namespace WindowsFormsApp1
             lastNameLabel.AutoSize = true;
             lastNameLabel.Location = new System.Drawing.Point(467, 81);
             lastNameLabel.Name = "lastNameLabel";
-            lastNameLabel.Size = new System.Drawing.Size(61, 13);
+            lastNameLabel.Size = new System.Drawing.Size(56, 13);
             lastNameLabel.TabIndex = 22;
-            lastNameLabel.Text = "Last Name:";
+            lastNameLabel.Text = "Фамилия";
             // 
             // firstNameLabel
             // 
             firstNameLabel.AutoSize = true;
             firstNameLabel.Location = new System.Drawing.Point(468, 116);
             firstNameLabel.Name = "firstNameLabel";
-            firstNameLabel.Size = new System.Drawing.Size(60, 13);
+            firstNameLabel.Size = new System.Drawing.Size(29, 13);
             firstNameLabel.TabIndex = 23;
-            firstNameLabel.Text = "First Name:";
+            firstNameLabel.Text = "Имя";
             // 
             // middleNameLabel
             // 
             middleNameLabel.AutoSize = true;
             middleNameLabel.Location = new System.Drawing.Point(467, 154);
             middleNameLabel.Name = "middleNameLabel";
-            middleNameLabel.Size = new System.Drawing.Size(72, 13);
+            middleNameLabel.Size = new System.Drawing.Size(54, 13);
             middleNameLabel.TabIndex = 24;
-            middleNameLabel.Text = "Middle Name:";
+            middleNameLabel.Text = "Отчество";
             // 
             // departmentLabel
             // 
             departmentLabel.AutoSize = true;
             departmentLabel.Location = new System.Drawing.Point(468, 188);
             departmentLabel.Name = "departmentLabel";
-            departmentLabel.Size = new System.Drawing.Size(65, 13);
+            departmentLabel.Size = new System.Drawing.Size(38, 13);
             departmentLabel.TabIndex = 25;
-            departmentLabel.Text = "Department:";
+            departmentLabel.Text = "Отдел";
             // 
             // positionLabel
             // 
             positionLabel.AutoSize = true;
-            positionLabel.Location = new System.Drawing.Point(481, 214);
+            positionLabel.Location = new System.Drawing.Point(468, 221);
             positionLabel.Name = "positionLabel";
-            positionLabel.Size = new System.Drawing.Size(47, 13);
+            positionLabel.Size = new System.Drawing.Size(65, 13);
             positionLabel.TabIndex = 26;
-            positionLabel.Text = "Position:";
+            positionLabel.Text = "Должность";
             // 
             // loginLabel
             // 
             loginLabel.AutoSize = true;
-            loginLabel.Location = new System.Drawing.Point(481, 288);
+            loginLabel.Location = new System.Drawing.Point(468, 308);
             loginLabel.Name = "loginLabel";
-            loginLabel.Size = new System.Drawing.Size(36, 13);
+            loginLabel.Size = new System.Drawing.Size(38, 13);
             loginLabel.TabIndex = 27;
-            loginLabel.Text = "Login:";
+            loginLabel.Text = "Логин";
             // 
             // passwordLabel
             // 
             passwordLabel.AutoSize = true;
-            passwordLabel.Location = new System.Drawing.Point(477, 323);
+            passwordLabel.Location = new System.Drawing.Point(461, 344);
             passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new System.Drawing.Size(56, 13);
+            passwordLabel.Size = new System.Drawing.Size(45, 13);
             passwordLabel.TabIndex = 28;
-            passwordLabel.Text = "Password:";
+            passwordLabel.Text = "Пароль";
             // 
             // label1
             // 
@@ -175,7 +174,7 @@ namespace WindowsFormsApp1
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(620, 344);
+            this.linkLabel1.Location = new System.Drawing.Point(622, 369);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(97, 13);
             this.linkLabel1.TabIndex = 14;
@@ -302,7 +301,7 @@ namespace WindowsFormsApp1
             // positionTextBox
             // 
             this.positionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.workersBindingSource, "Position", true));
-            this.positionTextBox.Location = new System.Drawing.Point(539, 214);
+            this.positionTextBox.Location = new System.Drawing.Point(539, 218);
             this.positionTextBox.Name = "positionTextBox";
             this.positionTextBox.Size = new System.Drawing.Size(100, 20);
             this.positionTextBox.TabIndex = 27;
@@ -311,7 +310,7 @@ namespace WindowsFormsApp1
             // 
             this.loginTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.workersBindingSource, "Login", true));
             this.loginTextBox.Enabled = false;
-            this.loginTextBox.Location = new System.Drawing.Point(539, 281);
+            this.loginTextBox.Location = new System.Drawing.Point(539, 301);
             this.loginTextBox.Name = "loginTextBox";
             this.loginTextBox.Size = new System.Drawing.Size(100, 20);
             this.loginTextBox.TabIndex = 28;
@@ -320,7 +319,7 @@ namespace WindowsFormsApp1
             // 
             this.passwordTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.workersBindingSource, "Password", true));
             this.passwordTextBox.Enabled = false;
-            this.passwordTextBox.Location = new System.Drawing.Point(539, 316);
+            this.passwordTextBox.Location = new System.Drawing.Point(539, 341);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(100, 20);
             this.passwordTextBox.TabIndex = 29;
@@ -347,30 +346,32 @@ namespace WindowsFormsApp1
             this.tableAdapterManager1.VacationsTableAdapter = null;
             this.tableAdapterManager1.WorkersTableAdapter = this.workersTableAdapter1;
             // 
-            // fillByToolStrip
+            // button1
             // 
-            this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fillByToolStripButton});
-            this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.fillByToolStrip.Name = "fillByToolStrip";
-            this.fillByToolStrip.Size = new System.Drawing.Size(800, 25);
-            this.fillByToolStrip.TabIndex = 30;
-            this.fillByToolStrip.Text = "fillByToolStrip";
+            this.button1.Location = new System.Drawing.Point(61, 394);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "Назад";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // fillByToolStripButton
+            // button2
             // 
-            this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fillByToolStripButton.Name = "fillByToolStripButton";
-            this.fillByToolStripButton.Size = new System.Drawing.Size(39, 22);
-            this.fillByToolStripButton.Text = "FillBy";
-            this.fillByToolStripButton.Click += new System.EventHandler(this.fillByToolStripButton_Click);
+            this.button2.Location = new System.Drawing.Point(225, 394);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 31;
+            this.button2.Text = "Сохранить";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Form10
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.fillByToolStrip);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(passwordLabel);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(loginLabel);
@@ -402,8 +403,6 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSet2)).EndInit();
-            this.fillByToolStrip.ResumeLayout(false);
-            this.fillByToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -436,7 +435,7 @@ namespace WindowsFormsApp1
         private proektDataSet2 proektDataSet2;
         private proektDataSet2TableAdapters.WorkersTableAdapter workersTableAdapter1;
         private proektDataSet2TableAdapters.TableAdapterManager tableAdapterManager1;
-        private System.Windows.Forms.ToolStrip fillByToolStrip;
-        private System.Windows.Forms.ToolStripButton fillByToolStripButton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

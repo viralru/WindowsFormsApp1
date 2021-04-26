@@ -35,16 +35,28 @@ namespace WindowsFormsApp1
             adapter.SelectCommand = command;
             adapter.Fill(table);
             ClientSession.UserName = textBox1.Text;
+            ClientSession.iduser = table.Rows[0][0].ToString();
+            string accessgroup = table.Rows[0][9].ToString();
             if (table.Rows.Count > 0)
             {
+                if(accessgroup == "1")
+                {
+                    Form8 form8 = new Form8();
+                    form8.Show();
+                    Hide();
+                }
+                else 
+                { 
+
                 Form1 form1 = new Form1();
                 form1.Show();
                 Hide();
+                }
 
-            }
+        }
             else
 
-                MessageBox.Show("Введен неверный пароль");
+                MessageBox.Show("Введен неверный логин или пароль");
          
         }
         
@@ -82,6 +94,13 @@ namespace WindowsFormsApp1
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ForgetPassword ForgetPassword = new ForgetPassword();
+            ForgetPassword.Show();
+           
         }
     } 
 }

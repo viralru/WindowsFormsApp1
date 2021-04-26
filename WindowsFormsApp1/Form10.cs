@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
@@ -24,16 +25,30 @@ namespace WindowsFormsApp1
 
         private void workersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.workersBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.proektDataSet1);
-
+  
         }
 
         private void Form10_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "proektDataSet1.Workers". При необходимости она может быть перемещена или удалена.
-            
+            String Login = ClientSession.UserName;
+            DB db = new DB();
+            DataTable table = new DataTable();
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            SqlCommand command = new SqlCommand("Select * from Workers where Login = @UL", db.GetConnection());
+            command.Parameters.Add("@UL", SqlDbType.VarChar).Value = Login;
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+            lastNameTextBox.Text = table.Rows[0][1].ToString();
+            firstNameTextBox.Text = table.Rows[0][2].ToString();
+            middleNameTextBox.Text = table.Rows[0][3].ToString();
+            departmentTextBox.Text = table.Rows[0][4].ToString();
+            positionTextBox.Text = table.Rows[0][5].ToString();
+            loginTextBox.Text = table.Rows[0][6].ToString();
+            passwordTextBox.Text = table.Rows[0][7].ToString();
+
+
+
 
         }
 
@@ -60,6 +75,18 @@ namespace WindowsFormsApp1
         private void lastNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
+            Hide();
         }
     }
 }

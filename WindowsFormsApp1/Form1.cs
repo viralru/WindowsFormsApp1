@@ -13,22 +13,17 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
-        public void SetLogin()
-        {
-            string UserLogin = this.textBox1.Text;
-        }
+     
         public Form1()
         {
             InitializeComponent();
-                String Login = "123";
-                String Pass = "125";
+                String userid = ClientSession.iduser;
                 DB db = new DB();
                 DataTable table = new DataTable();
 
                 SqlDataAdapter adapter = new SqlDataAdapter();
-                SqlCommand command = new SqlCommand("Select * from Workers where Login = @UL AND Password = @UP", db.GetConnection());
-                command.Parameters.Add("@UL", SqlDbType.VarChar).Value = Login;
-                command.Parameters.Add("@UP", SqlDbType.VarChar).Value = Pass;
+                SqlCommand command = new SqlCommand("Select * from Letters where id_Recipient LIKE @UID", db.GetConnection());
+                command.Parameters.Add("@UID", SqlDbType.VarChar).Value = userid;
                 adapter.SelectCommand = command;
                 adapter.Fill(table);
                 string text = table.Rows[0][1].ToString();
@@ -114,8 +109,8 @@ namespace WindowsFormsApp1
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //FolderCreation formcreationfolder = new FolderCreation();
-            //formcreationfolder.Show();
+            FolderCreationcs formcreationfolder = new FolderCreationcs();
+            formcreationfolder.Show();
         }
 
         private void button12_Click(object sender, EventArgs e)
