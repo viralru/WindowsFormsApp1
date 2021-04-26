@@ -218,7 +218,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Form3";
-            this.Text = "Form1";
+            this.Text = "Корзина";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -121,7 +121,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "Form12";
-            this.Text = "Form12";
+            this.Text = "Изменить пароль";
             this.ResumeLayout(false);
             this.PerformLayout();
 

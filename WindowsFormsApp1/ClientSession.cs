@@ -10,5 +10,6 @@ namespace WindowsFormsApp1
     {
         public static string UserName;
         public static string iduser;
+        public static string letter;
     }
 }

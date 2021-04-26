@@ -398,7 +398,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label1);
             this.Name = "Form10";
-            this.Text = "Form10";
+            this.Text = "Настройки";
             this.Load += new System.EventHandler(this.Form10_Load);
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).EndInit();

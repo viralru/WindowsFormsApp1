@@ -245,7 +245,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Name = "Form5";
-            this.Text = "Form1";
+            this.Text = "Отправить письмо";
             this.Load += new System.EventHandler(this.Form5_Load);
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSet1)).EndInit();
