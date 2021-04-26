@@ -120,23 +120,20 @@
   <metadata name="workersBindingSource3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>232, 56</value>
   </metadata>
-  <metadata name="fKVacationsWorkersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>493, 17</value>
+  <metadata name="proektDataSet2BindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <metadata name="proektDataSet2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1268, 17</value>
   </metadata>
   <metadata name="workersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>153, 17</value>
+  </metadata>
+  <metadata name="proektDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
   <metadata name="workersBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1088, 17</value>
-  </metadata>
-  <metadata name="proektDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="proektDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="workersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>153, 17</value>
   </metadata>
   <metadata name="workersTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>326, 17</value>
@@ -147,16 +144,33 @@
   <metadata name="workersBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>908, 17</value>
   </metadata>
-  <metadata name="proektDataSet2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1268, 17</value>
-  </metadata>
-  <metadata name="proektDataSet2BindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
-  </metadata>
-  <metadata name="proektDataSet2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1268, 17</value>
-  </metadata>
   <metadata name="workersTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>412, 56</value>
   </metadata>
+  <metadata name="fKVacationsWorkersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>493, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button11.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        sQAAALEBxi1JjQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEWSURBVEhLrZVB
+        TsNAEAR9gSdE5C9wDkLiW4FHkJ9wSkBC8IDcAxxA4g2k25GjTu/sLA4pqSRnZtwb27K3AzfwHf6O8BPe
+        w3PYZGy4egebRCeq3/AWKpeQPV5JEw+M/IDO0GuiQZlOrV6gIZmO1x/hK5z0vwQNyXRWcLk77Bnm1nDK
+        woCGZLbQ2YNFtJHZwuf3i3ijpvIMoxn3DYaNSIX3P5pxj14gwud5iy5g0ajZQmf34UQbmQ6fw9PusGeY
+        OwgnGpLpeJ0v2gs82YtWqxdoSKZTqxdoSKZTqxdoSKZyBVmLPuMFHjTGOWzCXSk6OZP/nOF/2pO5HXJb
+        jILUf3EGr+EC/kAP38CTwcVm8AF+QYZz8SPoui101jshBVdAMQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="button6.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        hQAAAIUB4uz/wQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAD/SURBVEhLvZbL
+        DYQwDETNmSbokiPcqQDREbVQwEp7CB4WR4OxdiUgG+lJ4EwmOF8kpfQTLYOCB2aItJ44KFK590UxY2Nx
+        mkObHD8FRDrlrUxKo7SKmXpQBw20aNOd/A4vIr3CBlfoD55kji9n4R1yJmZeKUiRRXeA1zYnnAHGkUV3
+        mLIvdYDJYpHnpcw7eI40RhN18G21jEpN2nqPeZ3RknbbRNE6N0YTe1BHOg884R1WGhiK/OUe1O0a344J
+        g8YcGTPQkD4iDBrFO3hkiMpOMonLLFNqVHyjlTsqtPzlsCt3XFMn5S6cHPhkghSfvzJz0F3gWp679CO0
+        XPxtSbIC925vQuDgk5cAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>

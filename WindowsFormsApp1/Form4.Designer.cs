@@ -119,7 +119,7 @@ namespace WindowsFormsApp1
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(616, 57);
+            this.comboBox1.Location = new System.Drawing.Point(622, 18);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 24;
@@ -165,7 +165,7 @@ namespace WindowsFormsApp1
             this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button10.Location = new System.Drawing.Point(743, 53);
+            this.button10.Location = new System.Drawing.Point(749, 14);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(30, 30);
             this.button10.TabIndex = 22;

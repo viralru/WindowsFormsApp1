@@ -30,19 +30,9 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form8));
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.fKVacationsWorkersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.workersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.proektDataSet1 = new WindowsFormsApp1.proektDataSet1();
-            this.workersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.workersTableAdapter = new WindowsFormsApp1.proektDataSet1TableAdapters.WorkersTableAdapter();
-            this.vacationsTableAdapter = new WindowsFormsApp1.proektDataSet1TableAdapters.VacationsTableAdapter();
-            this.workersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.proektDataSet2 = new WindowsFormsApp1.proektDataSet2();
-            this.proektDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.workersBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.workersTableAdapter1 = new WindowsFormsApp1.proektDataSet2TableAdapters.WorkersTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,15 +44,30 @@ namespace WindowsFormsApp1
             this.isActiveDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.idAccessGroupDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idSignDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.workersBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.proektDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.proektDataSet2 = new WindowsFormsApp1.proektDataSet2();
+            this.workersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.proektDataSet1 = new WindowsFormsApp1.proektDataSet1();
+            this.workersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.workersTableAdapter = new WindowsFormsApp1.proektDataSet1TableAdapters.WorkersTableAdapter();
+            this.vacationsTableAdapter = new WindowsFormsApp1.proektDataSet1TableAdapters.VacationsTableAdapter();
+            this.workersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.workersTableAdapter1 = new WindowsFormsApp1.proektDataSet2TableAdapters.WorkersTableAdapter();
+            this.fKVacationsWorkersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button11 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKVacationsWorkersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet2BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKVacationsWorkersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -96,58 +101,6 @@ namespace WindowsFormsApp1
             this.dataGridView1.Size = new System.Drawing.Size(1143, 317);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // fKVacationsWorkersBindingSource
-            // 
-            this.fKVacationsWorkersBindingSource.DataMember = "FK_Vacations_Workers";
-            this.fKVacationsWorkersBindingSource.DataSource = this.workersBindingSource;
-            // 
-            // workersBindingSource2
-            // 
-            this.workersBindingSource2.DataMember = "Workers";
-            this.workersBindingSource2.DataSource = this.proektDataSet1;
-            // 
-            // proektDataSet1
-            // 
-            this.proektDataSet1.DataSetName = "proektDataSet1";
-            this.proektDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // workersBindingSource
-            // 
-            this.workersBindingSource.DataMember = "Workers";
-            this.workersBindingSource.DataSource = this.proektDataSet1;
-            // 
-            // workersTableAdapter
-            // 
-            this.workersTableAdapter.ClearBeforeFill = true;
-            // 
-            // vacationsTableAdapter
-            // 
-            this.vacationsTableAdapter.ClearBeforeFill = true;
-            // 
-            // workersBindingSource1
-            // 
-            this.workersBindingSource1.DataMember = "Workers";
-            this.workersBindingSource1.DataSource = this.proektDataSet1;
-            // 
-            // proektDataSet2
-            // 
-            this.proektDataSet2.DataSetName = "proektDataSet2";
-            this.proektDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // proektDataSet2BindingSource
-            // 
-            this.proektDataSet2BindingSource.DataSource = this.proektDataSet2;
-            this.proektDataSet2BindingSource.Position = 0;
-            // 
-            // workersBindingSource3
-            // 
-            this.workersBindingSource3.DataMember = "Workers";
-            this.workersBindingSource3.DataSource = this.proektDataSet2BindingSource;
-            // 
-            // workersTableAdapter1
-            // 
-            this.workersTableAdapter1.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -215,25 +168,128 @@ namespace WindowsFormsApp1
             this.idSignDataGridViewTextBoxColumn.HeaderText = "id_Sign";
             this.idSignDataGridViewTextBoxColumn.Name = "idSignDataGridViewTextBoxColumn";
             // 
+            // workersBindingSource3
+            // 
+            this.workersBindingSource3.DataMember = "Workers";
+            this.workersBindingSource3.DataSource = this.proektDataSet2BindingSource;
+            // 
+            // proektDataSet2BindingSource
+            // 
+            this.proektDataSet2BindingSource.DataSource = this.proektDataSet2;
+            this.proektDataSet2BindingSource.Position = 0;
+            // 
+            // proektDataSet2
+            // 
+            this.proektDataSet2.DataSetName = "proektDataSet2";
+            this.proektDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // workersBindingSource
+            // 
+            this.workersBindingSource.DataMember = "Workers";
+            this.workersBindingSource.DataSource = this.proektDataSet1;
+            // 
+            // proektDataSet1
+            // 
+            this.proektDataSet1.DataSetName = "proektDataSet1";
+            this.proektDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // workersBindingSource2
+            // 
+            this.workersBindingSource2.DataMember = "Workers";
+            this.workersBindingSource2.DataSource = this.proektDataSet1;
+            // 
+            // workersTableAdapter
+            // 
+            this.workersTableAdapter.ClearBeforeFill = true;
+            // 
+            // vacationsTableAdapter
+            // 
+            this.vacationsTableAdapter.ClearBeforeFill = true;
+            // 
+            // workersBindingSource1
+            // 
+            this.workersBindingSource1.DataMember = "Workers";
+            this.workersBindingSource1.DataSource = this.proektDataSet1;
+            // 
+            // workersTableAdapter1
+            // 
+            this.workersTableAdapter1.ClearBeforeFill = true;
+            // 
+            // fKVacationsWorkersBindingSource
+            // 
+            this.fKVacationsWorkersBindingSource.DataMember = "FK_Vacations_Workers";
+            this.fKVacationsWorkersBindingSource.DataSource = this.workersBindingSource;
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button11.BackgroundImage")));
+            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button11.Location = new System.Drawing.Point(1139, 13);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(30, 30);
+            this.button11.TabIndex = 15;
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button6.ForeColor = System.Drawing.SystemColors.Control;
+            this.button6.Location = new System.Drawing.Point(1103, 13);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(30, 30);
+            this.button6.TabIndex = 14;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(150, 430);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(90, 23);
+            this.button2.TabIndex = 34;
+            this.button2.Text = "Сохранить";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(47, 430);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 33;
+            this.button1.Text = "Назад";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 465);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button11);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "Form8";
             this.Text = "Form8";
             this.Load += new System.EventHandler(this.Form8_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKVacationsWorkersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet2BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet2BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKVacationsWorkersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,5 +321,9 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.DataGridViewCheckBoxColumn isActiveDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idAccessGroupDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idSignDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

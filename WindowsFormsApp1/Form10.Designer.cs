@@ -64,6 +64,8 @@ namespace WindowsFormsApp1
             this.tableAdapterManager1 = new WindowsFormsApp1.proektDataSet2TableAdapters.TableAdapterManager();
             this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
             this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             lastNameLabel = new System.Windows.Forms.Label();
             firstNameLabel = new System.Windows.Forms.Label();
             middleNameLabel = new System.Windows.Forms.Label();
@@ -352,7 +354,7 @@ namespace WindowsFormsApp1
             this.fillByToolStripButton});
             this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
             this.fillByToolStrip.Name = "fillByToolStrip";
-            this.fillByToolStrip.Size = new System.Drawing.Size(111, 25);
+            this.fillByToolStrip.Size = new System.Drawing.Size(800, 25);
             this.fillByToolStrip.TabIndex = 30;
             this.fillByToolStrip.Text = "fillByToolStrip";
             // 
@@ -364,11 +366,33 @@ namespace WindowsFormsApp1
             this.fillByToolStripButton.Text = "FillBy";
             this.fillByToolStripButton.Click += new System.EventHandler(this.fillByToolStripButton_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(47, 415);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 31;
+            this.button1.Text = "Назад";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(150, 415);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(90, 23);
+            this.button2.TabIndex = 32;
+            this.button2.Text = "Сохранить";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form10
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(passwordLabel);
             this.Controls.Add(this.passwordTextBox);
@@ -437,5 +461,7 @@ namespace WindowsFormsApp1
         private proektDataSet2TableAdapters.TableAdapterManager tableAdapterManager1;
         private System.Windows.Forms.ToolStrip fillByToolStrip;
         private System.Windows.Forms.ToolStripButton fillByToolStripButton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
