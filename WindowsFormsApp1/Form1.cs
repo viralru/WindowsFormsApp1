@@ -26,13 +26,15 @@ namespace WindowsFormsApp1
                 command.Parameters.Add("@UID", SqlDbType.VarChar).Value = userid;
                 adapter.SelectCommand = command;
                 adapter.Fill(table);
-                string text = table.Rows[0][1].ToString();
-                tableLayoutPanel1.Controls.Add(new Label { Text = text });
-                tableLayoutPanel1.Controls.Add(new Label { Text = text });
-                textBox1.Text = ClientSession.UserName;
+                string theme = table.Rows[0][8].ToString();
+                string comment = table.Rows[0][9].ToString();
+                string themenospaces = theme.Replace(" ","");
+                string commentnospaces = comment.Replace(" ","");  
+                string text = themenospaces + "\r\n" + commentnospaces + "\r\n" + commentnospaces;
+                tableLayoutPanel1.Controls.Add(new Label { Text = text});
 
-           
-          
+
+
 
         }
 
