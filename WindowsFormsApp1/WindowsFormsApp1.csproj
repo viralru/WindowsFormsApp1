@@ -300,5 +300,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\2R540LuP0oo.jpg" />
+    <Content Include="Resources\z00SzkeG89Q %281%29.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

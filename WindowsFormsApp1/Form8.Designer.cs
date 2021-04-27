@@ -30,6 +30,7 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form8));
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +55,8 @@ namespace WindowsFormsApp1
             this.vacationsTableAdapter = new WindowsFormsApp1.proektDataSet1TableAdapters.VacationsTableAdapter();
             this.workersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.workersTableAdapter1 = new WindowsFormsApp1.proektDataSet2TableAdapters.WorkersTableAdapter();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSet2BindingSource)).BeginInit();
@@ -68,7 +71,7 @@ namespace WindowsFormsApp1
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(90, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(148, 13);
             this.label1.TabIndex = 0;
@@ -215,11 +218,38 @@ namespace WindowsFormsApp1
             // 
             this.workersTableAdapter1.ClearBeforeFill = true;
             // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button11.BackgroundImage")));
+            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button11.Location = new System.Drawing.Point(41, 9);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(30, 30);
+            this.button11.TabIndex = 14;
+            this.button11.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button6.ForeColor = System.Drawing.SystemColors.Control;
+            this.button6.Location = new System.Drawing.Point(5, 9);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(30, 30);
+            this.button6.TabIndex = 15;
+            this.button6.UseVisualStyleBackColor = false;
+            // 
             // Form8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 450);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button11);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "Form8";
@@ -265,5 +295,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.DataGridViewCheckBoxColumn isActiveDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idAccessGroupDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idSignDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button6;
     }
 }

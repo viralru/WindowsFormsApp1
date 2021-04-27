@@ -30,6 +30,7 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.workersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.proektDataSet1 = new WindowsFormsApp1.proektDataSet1();
@@ -210,18 +211,18 @@ namespace WindowsFormsApp1
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(61, 61);
+            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.Location = new System.Drawing.Point(71, 60);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(130, 23);
+            this.button5.Size = new System.Drawing.Size(65, 67);
             this.button5.TabIndex = 14;
-            this.button5.Text = "Выбрать файл";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(198, 68);
+            this.label3.Location = new System.Drawing.Point(153, 87);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 15;
