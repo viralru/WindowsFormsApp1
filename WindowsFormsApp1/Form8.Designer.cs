@@ -47,7 +47,6 @@ namespace WindowsFormsApp1
             this.workersBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.proektDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.proektDataSet2 = new WindowsFormsApp1.proektDataSet2();
-            this.fKVacationsWorkersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.workersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.proektDataSet1 = new WindowsFormsApp1.proektDataSet1();
             this.workersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
@@ -55,23 +54,24 @@ namespace WindowsFormsApp1
             this.vacationsTableAdapter = new WindowsFormsApp1.proektDataSet1TableAdapters.VacationsTableAdapter();
             this.workersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.workersTableAdapter1 = new WindowsFormsApp1.proektDataSet2TableAdapters.WorkersTableAdapter();
-            this.button11 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.fKVacationsWorkersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSet2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKVacationsWorkersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKVacationsWorkersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(90, 9);
+            this.label1.Location = new System.Drawing.Point(92, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(148, 13);
             this.label1.TabIndex = 0;
@@ -181,11 +181,6 @@ namespace WindowsFormsApp1
             this.proektDataSet2.DataSetName = "proektDataSet2";
             this.proektDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // fKVacationsWorkersBindingSource
-            // 
-            this.fKVacationsWorkersBindingSource.DataMember = "FK_Vacations_Workers";
-            this.fKVacationsWorkersBindingSource.DataSource = this.workersBindingSource;
-            // 
             // workersBindingSource
             // 
             this.workersBindingSource.DataMember = "Workers";
@@ -218,6 +213,19 @@ namespace WindowsFormsApp1
             // 
             this.workersTableAdapter1.ClearBeforeFill = true;
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button6.ForeColor = System.Drawing.SystemColors.Control;
+            this.button6.Location = new System.Drawing.Point(5, 9);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(30, 30);
+            this.button6.TabIndex = 15;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
+            // 
             // button11
             // 
             this.button11.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -230,18 +238,12 @@ namespace WindowsFormsApp1
             this.button11.Size = new System.Drawing.Size(30, 30);
             this.button11.TabIndex = 14;
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click_1);
             // 
-            // button6
+            // fKVacationsWorkersBindingSource
             // 
-            this.button6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button6.ForeColor = System.Drawing.SystemColors.Control;
-            this.button6.Location = new System.Drawing.Point(5, 9);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(30, 30);
-            this.button6.TabIndex = 15;
-            this.button6.UseVisualStyleBackColor = false;
+            this.fKVacationsWorkersBindingSource.DataMember = "FK_Vacations_Workers";
+            this.fKVacationsWorkersBindingSource.DataSource = this.workersBindingSource;
             // 
             // Form8
             // 
@@ -259,11 +261,11 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSet2BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKVacationsWorkersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKVacationsWorkersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

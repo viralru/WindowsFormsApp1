@@ -16,6 +16,26 @@ namespace WindowsFormsApp1
         public Form10()
         {
             InitializeComponent();
+            DB db = new DB();
+            DataTable table = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            SqlCommand command = new SqlCommand("Select id,FirstName,LastName from Workers", db.GetConnection());
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+            int Rowscount = table.Rows.Count;
+            if (Rowscount != 0)
+            {
+                for (int i = 0; i < Rowscount; i++)
+                {
+                    string id = table.Rows[i][0].ToString();
+                    string FirstName = table.Rows[i][1].ToString();
+                    string LastName = table.Rows[i][2].ToString();
+                    string Text = FirstName + " " + LastName;
+                    lastNameComboBox.Items.Add(Text);
+
+
+                }
+            }
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -87,6 +107,11 @@ namespace WindowsFormsApp1
             Form1 form1 = new Form1();
             form1.Show();
             Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

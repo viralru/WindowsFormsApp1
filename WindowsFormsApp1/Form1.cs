@@ -55,7 +55,7 @@ namespace WindowsFormsApp1
                     string ShortUserName = table2.Rows[0][2].ToString();
                    
                     tableLayoutPanel1.Controls.Add(new LinkLabel { Text = themenospaces + "\r\n" + "\r\n" + ShortUserName + "\r\n" + commentnospaces, Name = "LinkClick" + id, Tag = i, Size = new Size(80, 80)});;
-                    tableLayoutPanel1.Controls.Add(new Button { Name = "buttonclick" + id } );
+                    tableLayoutPanel1.Controls.Add(new Button { Name = "buttonclick" + id, BackgroundImage = WindowsFormsApp1.Properties.Resources.z00SzkeG89Q } );
                     (tableLayoutPanel1.Controls["LinkClick" + id] as LinkLabel).Click += OpenMy;
                     (tableLayoutPanel1.Controls["buttonclick" + id] as Button).Click += DeleteMy;
 

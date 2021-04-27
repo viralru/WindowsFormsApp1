@@ -302,7 +302,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\2R540LuP0oo.jpg" />
+    <None Include="Resources\2R540LuP0oo1.jpg" />
     <Content Include="Resources\z00SzkeG89Q %281%29.jpg" />
+    <None Include="Resources\z00SzkeG89Q1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

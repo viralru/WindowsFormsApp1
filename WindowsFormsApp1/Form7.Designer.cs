@@ -29,7 +29,6 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form7));
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -109,7 +108,7 @@ namespace WindowsFormsApp1
             // 
             // button5
             // 
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.BackgroundImage = global::WindowsFormsApp1.Properties.Resources._2R540LuP0oo;
             this.button5.Location = new System.Drawing.Point(59, 212);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(65, 67);
