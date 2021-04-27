@@ -35,11 +35,12 @@ namespace WindowsFormsApp1
             adapter.SelectCommand = command;
             adapter.Fill(table);
             ClientSession.UserName = textBox1.Text;
-            ClientSession.iduser = table.Rows[0][0].ToString();
-            string accessgroup = table.Rows[0][9].ToString();
+           
             if (table.Rows.Count > 0)
             {
-                if(accessgroup == "1")
+                ClientSession.iduser = table.Rows[0][0].ToString();
+                string accessgroup = table.Rows[0][9].ToString();
+                if (accessgroup == "1")
                 {
                     Form8 form8 = new Form8();
                     form8.Show();

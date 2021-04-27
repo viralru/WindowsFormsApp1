@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
             string Passnospace = Pass.Replace(" ", "");
             if(Passnospace == textBox1.Text)
             {   // поменять на реплейс
-                SqlCommand command = new SqlCommand("INSERT INTO Workers(Password) Values(@UNewPass) where id = @UIDU ", db.GetConnection());
+                SqlCommand command = new SqlCommand("UPDATE Workers(Password) Values(@UNewPass) where id = @UIDU ", db.GetConnection());
                 command.Parameters.Add("@UIDU", SqlDbType.VarChar).Value = ClientSession.iduser;
                 command.Parameters.Add("@UNewPass", SqlDbType.VarChar).Value = textBox2.Text;
                 Hide();
