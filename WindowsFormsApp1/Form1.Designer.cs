@@ -48,8 +48,8 @@ namespace WindowsFormsApp1
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.button10 = new System.Windows.Forms.Button();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.vacationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSet)).BeginInit();
             this.SuspendLayout();
@@ -224,17 +224,6 @@ namespace WindowsFormsApp1
             this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(40, 257);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(81, 13);
-            this.linkLabel2.TabIndex = 15;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Создать папку";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
-            // 
             // button10
             // 
             this.button10.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -249,6 +238,15 @@ namespace WindowsFormsApp1
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click_1);
             // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(40, 257);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(81, 13);
+            this.linkLabel2.TabIndex = 15;
+            this.linkLabel2.TabStop = true;
+         // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -299,8 +297,8 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }
 

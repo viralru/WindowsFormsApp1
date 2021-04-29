@@ -88,12 +88,6 @@ namespace WindowsFormsApp1
 
         }
 
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            FolderCreation formcreationfolder = new FolderCreation();
-            formcreationfolder.Show();
-        }
-
         private void button12_Click(object sender, EventArgs e)
         {
 

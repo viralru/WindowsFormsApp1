@@ -59,12 +59,6 @@ namespace WindowsFormsApp1
             Hide();
         }
 
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            FolderCreation formcreationfolder = new FolderCreation();
-            formcreationfolder.Show();
-        }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 

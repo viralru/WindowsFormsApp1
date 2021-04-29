@@ -46,7 +46,6 @@ namespace WindowsFormsApp1
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.proektDataSet1 = new WindowsFormsApp1.proektDataSet1();
             this.workersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.workersTableAdapter = new WindowsFormsApp1.proektDataSet1TableAdapters.WorkersTableAdapter();
@@ -66,6 +65,7 @@ namespace WindowsFormsApp1
             this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             lastNameLabel = new System.Windows.Forms.Label();
             firstNameLabel = new System.Windows.Forms.Label();
             middleNameLabel = new System.Windows.Forms.Label();
@@ -222,16 +222,6 @@ namespace WindowsFormsApp1
             this.label8.Text = "В отпуске";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(150, 85);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(14, 13);
-            this.radioButton1.TabIndex = 19;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
             // proektDataSet1
             // 
             this.proektDataSet1.DataSetName = "proektDataSet1";
@@ -386,11 +376,21 @@ namespace WindowsFormsApp1
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(125, 87);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(15, 14);
+            this.checkBox1.TabIndex = 33;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // Form10
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.fillByToolStrip);
@@ -409,7 +409,6 @@ namespace WindowsFormsApp1
             this.Controls.Add(lastNameLabel);
             this.Controls.Add(this.lastNameTextBox);
             this.Controls.Add(this.lastNameComboBox);
-            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -443,7 +442,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RadioButton radioButton1;
         private proektDataSet1 proektDataSet1;
         private System.Windows.Forms.BindingSource workersBindingSource;
         private proektDataSet1TableAdapters.WorkersTableAdapter workersTableAdapter;
@@ -463,5 +461,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ToolStripButton fillByToolStripButton;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

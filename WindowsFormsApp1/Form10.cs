@@ -59,8 +59,9 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form9 form9 = new Form9();
-            form9.Show();
+            Form1 form1 = new Form1();
+            form1.Show();
+            Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)

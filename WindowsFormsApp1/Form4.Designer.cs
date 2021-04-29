@@ -112,10 +112,7 @@ namespace WindowsFormsApp1
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(81, 13);
             this.linkLabel2.TabIndex = 27;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Создать папку";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
-            // 
+            this.linkLabel2.TabStop = true; // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
