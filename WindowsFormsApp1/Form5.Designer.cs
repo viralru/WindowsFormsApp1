@@ -33,20 +33,19 @@ namespace WindowsFormsApp1
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.workersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.proektDataSet1 = new WindowsFormsApp1.proektDataSet1();
+     
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.proektDataSet = new WindowsFormsApp1.proektDataSet();
+
             this.proektDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vacationBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vacationTableAdapter = new WindowsFormsApp1.proektDataSetTableAdapters.VacationTableAdapter();
+
             this.proektDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.vacationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vacationsTableAdapter = new WindowsFormsApp1.proektDataSet1TableAdapters.VacationsTableAdapter();
-            this.workersTableAdapter = new WindowsFormsApp1.proektDataSet1TableAdapters.WorkersTableAdapter();
+
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -56,8 +55,7 @@ namespace WindowsFormsApp1
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet)).BeginInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vacationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSetBindingSource1)).BeginInit();
@@ -76,12 +74,11 @@ namespace WindowsFormsApp1
             // workersBindingSource
             // 
             this.workersBindingSource.DataMember = "Workers";
-            this.workersBindingSource.DataSource = this.proektDataSet1;
+ 
             // 
             // proektDataSet1
             // 
-            this.proektDataSet1.DataSetName = "proektDataSet1";
-            this.proektDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+ 
             // 
             // label1
             // 
@@ -129,12 +126,11 @@ namespace WindowsFormsApp1
             // 
             // proektDataSet
             // 
-            this.proektDataSet.DataSetName = "proektDataSet";
-            this.proektDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+
             // 
             // proektDataSetBindingSource
             // 
-            this.proektDataSetBindingSource.DataSource = this.proektDataSet;
+       
             this.proektDataSetBindingSource.Position = 0;
             // 
             // vacationBindingSource
@@ -144,25 +140,25 @@ namespace WindowsFormsApp1
             // 
             // vacationTableAdapter
             // 
-            this.vacationTableAdapter.ClearBeforeFill = true;
+ 
             // 
             // proektDataSetBindingSource1
             // 
-            this.proektDataSetBindingSource1.DataSource = this.proektDataSet;
+           
             this.proektDataSetBindingSource1.Position = 0;
             // 
             // vacationsBindingSource
             // 
             this.vacationsBindingSource.DataMember = "Vacations";
-            this.vacationsBindingSource.DataSource = this.proektDataSet1;
+ 
             // 
             // vacationsTableAdapter
             // 
-            this.vacationsTableAdapter.ClearBeforeFill = true;
+   
             // 
             // workersTableAdapter
             // 
-            this.workersTableAdapter.ClearBeforeFill = true;
+
             // 
             // button1
             // 
@@ -249,8 +245,7 @@ namespace WindowsFormsApp1
             this.Text = "Отправить письмо";
             this.Load += new System.EventHandler(this.Form5_Load);
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet)).EndInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vacationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSetBindingSource1)).EndInit();
@@ -269,15 +264,15 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.BindingSource proektDataSetBindingSource;
-        private proektDataSet proektDataSet;
+
         private System.Windows.Forms.BindingSource vacationBindingSource;
-        private proektDataSetTableAdapters.VacationTableAdapter vacationTableAdapter;
+
         private System.Windows.Forms.BindingSource proektDataSetBindingSource1;
-        private proektDataSet1 proektDataSet1;
+
         private System.Windows.Forms.BindingSource vacationsBindingSource;
-        private proektDataSet1TableAdapters.VacationsTableAdapter vacationsTableAdapter;
+
         private System.Windows.Forms.BindingSource workersBindingSource;
-        private proektDataSet1TableAdapters.WorkersTableAdapter workersTableAdapter;
+
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;

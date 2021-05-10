@@ -47,10 +47,9 @@ namespace WindowsFormsApp1
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.proektDataSet1 = new WindowsFormsApp1.proektDataSet1();
+
             this.workersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.workersTableAdapter = new WindowsFormsApp1.proektDataSet1TableAdapters.WorkersTableAdapter();
-            this.tableAdapterManager = new WindowsFormsApp1.proektDataSet1TableAdapters.TableAdapterManager();
+
             this.lastNameComboBox = new System.Windows.Forms.ComboBox();
             this.lastNameTextBox = new System.Windows.Forms.TextBox();
             this.firstNameTextBox = new System.Windows.Forms.TextBox();
@@ -59,9 +58,7 @@ namespace WindowsFormsApp1
             this.positionTextBox = new System.Windows.Forms.TextBox();
             this.loginTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.proektDataSet2 = new WindowsFormsApp1.proektDataSet2();
-            this.workersTableAdapter1 = new WindowsFormsApp1.proektDataSet2TableAdapters.WorkersTableAdapter();
-            this.tableAdapterManager1 = new WindowsFormsApp1.proektDataSet2TableAdapters.TableAdapterManager();
+
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             lastNameLabel = new System.Windows.Forms.Label();
@@ -71,9 +68,9 @@ namespace WindowsFormsApp1
             positionLabel = new System.Windows.Forms.Label();
             loginLabel = new System.Windows.Forms.Label();
             passwordLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet1)).BeginInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet2)).BeginInit();
+
             this.SuspendLayout();
             // 
             // lastNameLabel
@@ -231,30 +228,20 @@ namespace WindowsFormsApp1
             // 
             // proektDataSet1
             // 
-            this.proektDataSet1.DataSetName = "proektDataSet1";
-            this.proektDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+
             // 
             // workersBindingSource
             // 
             this.workersBindingSource.DataMember = "Workers";
-            this.workersBindingSource.DataSource = this.proektDataSet1;
+
             // 
             // workersTableAdapter
             // 
-            this.workersTableAdapter.ClearBeforeFill = true;
+
             // 
             // tableAdapterManager
             // 
-            this.tableAdapterManager.AccessGroupsTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.DocumentsTableAdapter = null;
-            this.tableAdapterManager.LettersOfWorkersTableAdapter = null;
-            this.tableAdapterManager.LettersTableAdapter = null;
-            this.tableAdapterManager.LetterStatusTableAdapter = null;
-            this.tableAdapterManager.SignsTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = WindowsFormsApp1.proektDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.VacationsTableAdapter = null;
-            this.tableAdapterManager.WorkersTableAdapter = this.workersTableAdapter;
+  
             // 
             // lastNameComboBox
             // 
@@ -326,25 +313,15 @@ namespace WindowsFormsApp1
             // 
             // proektDataSet2
             // 
-            this.proektDataSet2.DataSetName = "proektDataSet2";
-            this.proektDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+
             // 
             // workersTableAdapter1
             // 
-            this.workersTableAdapter1.ClearBeforeFill = true;
+
             // 
             // tableAdapterManager1
             // 
-            this.tableAdapterManager1.AccessGroupsTableAdapter = null;
-            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager1.DocumentsTableAdapter = null;
-            this.tableAdapterManager1.LettersOfWorkersTableAdapter = null;
-            this.tableAdapterManager1.LettersTableAdapter = null;
-            this.tableAdapterManager1.LetterStatusTableAdapter = null;
-            this.tableAdapterManager1.SignsTableAdapter = null;
-            this.tableAdapterManager1.UpdateOrder = WindowsFormsApp1.proektDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager1.VacationsTableAdapter = null;
-            this.tableAdapterManager1.WorkersTableAdapter = this.workersTableAdapter1;
+
             // 
             // button1
             // 
@@ -401,9 +378,9 @@ namespace WindowsFormsApp1
             this.Name = "Form10";
             this.Text = "Настройки";
             this.Load += new System.EventHandler(this.Form10_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet1)).EndInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet2)).EndInit();
+ 
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -421,10 +398,9 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.RadioButton radioButton1;
-        private proektDataSet1 proektDataSet1;
+
         private System.Windows.Forms.BindingSource workersBindingSource;
-        private proektDataSet1TableAdapters.WorkersTableAdapter workersTableAdapter;
-        private proektDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
+
         private System.Windows.Forms.ComboBox lastNameComboBox;
         private System.Windows.Forms.TextBox lastNameTextBox;
         private System.Windows.Forms.TextBox firstNameTextBox;
@@ -433,9 +409,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox positionTextBox;
         private System.Windows.Forms.TextBox loginTextBox;
         private System.Windows.Forms.TextBox passwordTextBox;
-        private proektDataSet2 proektDataSet2;
-        private proektDataSet2TableAdapters.WorkersTableAdapter workersTableAdapter1;
-        private proektDataSet2TableAdapters.TableAdapterManager tableAdapterManager1;
+
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
     }

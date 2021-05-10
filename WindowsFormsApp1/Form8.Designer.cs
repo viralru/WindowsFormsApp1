@@ -46,23 +46,22 @@ namespace WindowsFormsApp1
             this.idSignDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.workersBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.proektDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.proektDataSet2 = new WindowsFormsApp1.proektDataSet2();
+   
             this.workersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.proektDataSet1 = new WindowsFormsApp1.proektDataSet1();
+    
             this.workersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.workersTableAdapter = new WindowsFormsApp1.proektDataSet1TableAdapters.WorkersTableAdapter();
-            this.vacationsTableAdapter = new WindowsFormsApp1.proektDataSet1TableAdapters.VacationsTableAdapter();
+   
             this.workersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.workersTableAdapter1 = new WindowsFormsApp1.proektDataSet2TableAdapters.WorkersTableAdapter();
+      
             this.button6 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.fKVacationsWorkersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSet2BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet2)).BeginInit();
+  
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet1)).BeginInit();
+      
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKVacationsWorkersBindingSource)).BeginInit();
@@ -173,45 +172,43 @@ namespace WindowsFormsApp1
             // 
             // proektDataSet2BindingSource
             // 
-            this.proektDataSet2BindingSource.DataSource = this.proektDataSet2;
+      
             this.proektDataSet2BindingSource.Position = 0;
             // 
             // proektDataSet2
             // 
-            this.proektDataSet2.DataSetName = "proektDataSet2";
-            this.proektDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+
             // 
             // workersBindingSource
             // 
             this.workersBindingSource.DataMember = "Workers";
-            this.workersBindingSource.DataSource = this.proektDataSet1;
+
             // 
             // proektDataSet1
             // 
-            this.proektDataSet1.DataSetName = "proektDataSet1";
-            this.proektDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+
             // 
             // workersBindingSource2
             // 
             this.workersBindingSource2.DataMember = "Workers";
-            this.workersBindingSource2.DataSource = this.proektDataSet1;
+ 
             // 
             // workersTableAdapter
             // 
-            this.workersTableAdapter.ClearBeforeFill = true;
+     
             // 
             // vacationsTableAdapter
             // 
-            this.vacationsTableAdapter.ClearBeforeFill = true;
+          
             // 
             // workersBindingSource1
             // 
             this.workersBindingSource1.DataMember = "Workers";
-            this.workersBindingSource1.DataSource = this.proektDataSet1;
+
             // 
             // workersTableAdapter1
             // 
-            this.workersTableAdapter1.ClearBeforeFill = true;
+      
             // 
             // button6
             // 
@@ -260,9 +257,9 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSet2BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet2)).EndInit();
+       
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet1)).EndInit();
+ 
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKVacationsWorkersBindingSource)).EndInit();
@@ -274,18 +271,18 @@ namespace WindowsFormsApp1
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private proektDataSet1 proektDataSet1;
+
         private System.Windows.Forms.BindingSource workersBindingSource;
-        private proektDataSet1TableAdapters.WorkersTableAdapter workersTableAdapter;
+
         private System.Windows.Forms.BindingSource fKVacationsWorkersBindingSource;
-        private proektDataSet1TableAdapters.VacationsTableAdapter vacationsTableAdapter;
+
         private System.Windows.Forms.BindingSource workersBindingSource1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource workersBindingSource2;
         private System.Windows.Forms.BindingSource proektDataSet2BindingSource;
-        private proektDataSet2 proektDataSet2;
+    
         private System.Windows.Forms.BindingSource workersBindingSource3;
-        private proektDataSet2TableAdapters.WorkersTableAdapter workersTableAdapter1;
+
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;

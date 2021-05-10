@@ -83,7 +83,7 @@ namespace WindowsFormsApp1
         {
             try
             {
-                this.workersTableAdapter1.FillBy(this.proektDataSet2.Workers);
+                //this.workersTableAdapter1.FillBy(this.proektDataSet2.Workers);
             }
             catch (System.Exception ex)
             {

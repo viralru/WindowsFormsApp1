@@ -34,25 +34,22 @@ namespace WindowsFormsApp1
             System.Windows.Forms.Label loginLabel1;
             this.button1 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.proektDataSet1 = new WindowsFormsApp1.proektDataSet1();
+
             this.workersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.workersTableAdapter = new WindowsFormsApp1.proektDataSet1TableAdapters.WorkersTableAdapter();
-            this.tableAdapterManager = new WindowsFormsApp1.proektDataSet1TableAdapters.TableAdapterManager();
+   
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.workersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.proektDataSet2 = new WindowsFormsApp1.proektDataSet2();
-            this.workersTableAdapter1 = new WindowsFormsApp1.proektDataSet2TableAdapters.WorkersTableAdapter();
-            this.tableAdapterManager1 = new WindowsFormsApp1.proektDataSet2TableAdapters.TableAdapterManager();
-            this.accessGroupsTableAdapter1 = new WindowsFormsApp1.proektDataSet1TableAdapters.AccessGroupsTableAdapter();
+ 
+     
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             passwordLabel = new System.Windows.Forms.Label();
             loginLabel1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet1)).BeginInit();
+          
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet2)).BeginInit();
+        
             this.SuspendLayout();
             // 
             // passwordLabel
@@ -96,30 +93,20 @@ namespace WindowsFormsApp1
             // 
             // proektDataSet1
             // 
-            this.proektDataSet1.DataSetName = "proektDataSet1";
-            this.proektDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+         
             // 
             // workersBindingSource
             // 
             this.workersBindingSource.DataMember = "Workers";
-            this.workersBindingSource.DataSource = this.proektDataSet1;
+          
             // 
             // workersTableAdapter
             // 
-            this.workersTableAdapter.ClearBeforeFill = true;
+          
             // 
             // tableAdapterManager
             // 
-            this.tableAdapterManager.AccessGroupsTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.DocumentsTableAdapter = null;
-            this.tableAdapterManager.LettersOfWorkersTableAdapter = null;
-            this.tableAdapterManager.LettersTableAdapter = null;
-            this.tableAdapterManager.LetterStatusTableAdapter = null;
-            this.tableAdapterManager.SignsTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = WindowsFormsApp1.proektDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.VacationsTableAdapter = null;
-            this.tableAdapterManager.WorkersTableAdapter = this.workersTableAdapter;
+          
             // 
             // textBox2
             // 
@@ -132,33 +119,23 @@ namespace WindowsFormsApp1
             // workersBindingSource1
             // 
             this.workersBindingSource1.DataMember = "Workers";
-            this.workersBindingSource1.DataSource = this.proektDataSet2;
+   
             // 
             // proektDataSet2
             // 
-            this.proektDataSet2.DataSetName = "proektDataSet2";
-            this.proektDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+           
             // 
             // workersTableAdapter1
             // 
-            this.workersTableAdapter1.ClearBeforeFill = true;
+        
             // 
             // tableAdapterManager1
             // 
-            this.tableAdapterManager1.AccessGroupsTableAdapter = null;
-            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager1.DocumentsTableAdapter = null;
-            this.tableAdapterManager1.LettersOfWorkersTableAdapter = null;
-            this.tableAdapterManager1.LettersTableAdapter = null;
-            this.tableAdapterManager1.LetterStatusTableAdapter = null;
-            this.tableAdapterManager1.SignsTableAdapter = null;
-            this.tableAdapterManager1.UpdateOrder = WindowsFormsApp1.proektDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager1.VacationsTableAdapter = null;
-            this.tableAdapterManager1.WorkersTableAdapter = this.workersTableAdapter1;
+       
             // 
             // accessGroupsTableAdapter1
             // 
-            this.accessGroupsTableAdapter1.ClearBeforeFill = true;
+
             // 
             // textBox1
             // 
@@ -204,10 +181,10 @@ namespace WindowsFormsApp1
             this.Name = "Form9";
             this.Text = " Вход";
             this.Load += new System.EventHandler(this.Form9_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet1)).EndInit();
+  
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet2)).EndInit();
+          
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,16 +193,13 @@ namespace WindowsFormsApp1
         #endregion
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private proektDataSet1 proektDataSet1;
+
         private System.Windows.Forms.BindingSource workersBindingSource;
-        private proektDataSet1TableAdapters.WorkersTableAdapter workersTableAdapter;
-        private proektDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
+ 
         private System.Windows.Forms.TextBox textBox2;
-        private proektDataSet2 proektDataSet2;
+  
         private System.Windows.Forms.BindingSource workersBindingSource1;
-        private proektDataSet2TableAdapters.WorkersTableAdapter workersTableAdapter1;
-        private proektDataSet2TableAdapters.TableAdapterManager tableAdapterManager1;
-        private proektDataSet1TableAdapters.AccessGroupsTableAdapter accessGroupsTableAdapter1;
+   
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;

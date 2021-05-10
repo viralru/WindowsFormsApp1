@@ -38,19 +38,15 @@ namespace WindowsFormsApp1
             this.button5 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.vacationBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.proektDataSet = new WindowsFormsApp1.proektDataSet();
-            this.vacationTableAdapter = new WindowsFormsApp1.proektDataSetTableAdapters.VacationTableAdapter();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.accessGroupsTableAdapter1 = new WindowsFormsApp1.proektDataSet1TableAdapters.AccessGroupsTableAdapter();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.vacationBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -118,16 +114,6 @@ namespace WindowsFormsApp1
             // vacationBindingSource
             // 
             this.vacationBindingSource.DataMember = "Vacation";
-            this.vacationBindingSource.DataSource = this.proektDataSet;
-            // 
-            // proektDataSet
-            // 
-            this.proektDataSet.DataSetName = "proektDataSet";
-            this.proektDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vacationTableAdapter
-            // 
-            this.vacationTableAdapter.ClearBeforeFill = true;
             // 
             // textBox1
             // 
@@ -157,25 +143,21 @@ namespace WindowsFormsApp1
             this.linkLabel2.Text = "Создать папку";
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
-            // accessGroupsTableAdapter1
-            // 
-            this.accessGroupsTableAdapter1.ClearBeforeFill = true;
-            // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel1.AutoScroll = true;
             this.tableLayoutPanel1.AutoSize = true;
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 353F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 24F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 24F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(330, 104);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(327, 111);
             this.tableLayoutPanel1.MinimumSize = new System.Drawing.Size(50, 50);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 74F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 78F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(451, 78);
             this.tableLayoutPanel1.TabIndex = 16;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
@@ -258,7 +240,6 @@ namespace WindowsFormsApp1
             this.Text = "Входящие";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.vacationBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proektDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,16 +254,16 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button button6;
-        private proektDataSet proektDataSet;
+       
         private System.Windows.Forms.BindingSource vacationBindingSource;
-        private proektDataSetTableAdapters.VacationTableAdapter vacationTableAdapter;
+        
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Button button10;
-        private proektDataSet1TableAdapters.AccessGroupsTableAdapter accessGroupsTableAdapter1;
+      
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

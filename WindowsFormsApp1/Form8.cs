@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
         private void Form8_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "proektDataSet2.Workers". При необходимости она может быть перемещена или удалена.
-            this.workersTableAdapter1.Fill(this.proektDataSet2.Workers);
+           // this.workersTableAdapter1.Fill(this.proektDataSet2.Workers);
          //1
 
         }

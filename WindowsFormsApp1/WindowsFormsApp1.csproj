@@ -88,6 +88,12 @@
     <Compile Include="ForgetPassword.Designer.cs">
       <DependentUpon>ForgetPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Letter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Letter.Designer.cs">
+      <DependentUpon>Letter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form10.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,39 +154,13 @@
     <Compile Include="Form8.Designer.cs">
       <DependentUpon>Form8.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form7.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form7.Designer.cs">
-      <DependentUpon>Form7.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form9.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form9.Designer.cs">
       <DependentUpon>Form9.cs</DependentUpon>
     </Compile>
-    <Compile Include="proektDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>proektDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="proektDataSet1.cs">
-      <DependentUpon>proektDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="proektDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>proektDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="proektDataSet2.cs">
-      <DependentUpon>proektDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="proektDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>proektDataSet2.xsd</DependentUpon>
-    </Compile>
+    <Compile Include="LocalDB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FolderCreationcs.resx">
@@ -188,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ForgetPassword.resx">
       <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letter.resx">
+      <DependentUpon>Letter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form10.resx">
       <DependentUpon>Form10.cs</DependentUpon>
@@ -216,9 +199,6 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form7.resx">
-      <DependentUpon>Form7.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form8.resx">
       <DependentUpon>Form8.cs</DependentUpon>
     </EmbeddedResource>
@@ -235,39 +215,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="proektDataSet.xsc">
-      <DependentUpon>proektDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="proektDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>proektDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="proektDataSet.xss">
-      <DependentUpon>proektDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="proektDataSet1.xsc">
-      <DependentUpon>proektDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="proektDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>proektDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="proektDataSet1.xss">
-      <DependentUpon>proektDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="proektDataSet2.xsc">
-      <DependentUpon>proektDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="proektDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>proektDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="proektDataSet2.xss">
-      <DependentUpon>proektDataSet2.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -301,6 +248,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Database1.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database1_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
     <Content Include="Resources\2R540LuP0oo.jpg" />
     <None Include="Resources\2R540LuP0oo1.jpg" />
     <Content Include="Resources\z00SzkeG89Q %281%29.jpg" />
