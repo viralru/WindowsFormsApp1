@@ -8,7 +8,7 @@ namespace WindowsFormsApp1
 {
     public partial class Letter : Form
     {
-       
+   
         public Letter()
         {
             InitializeComponent();
@@ -25,23 +25,30 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             String letterid = ClientSession.letter;
-            String idletter = letterid.Replace("LinkClick", "");
-          
-
+            ClientSession.idletter = letterid.Replace("LinkClick", "");
             DB db = new DB();
             DataTable table = new DataTable();
 
             SqlDataAdapter adapter = new SqlDataAdapter();
             SqlCommand command = new SqlCommand("Select * from Letters where id = @UID", db.GetConnection());
-            command.Parameters.Add("@UID", SqlDbType.VarChar).Value = idletter;
+            command.Parameters.Add("@UID", SqlDbType.VarChar).Value = ClientSession.idletter;
             adapter.SelectCommand = command;
             adapter.Fill(table);
             string theme = table.Rows[0][8].ToString();
             string themenospaces = theme.Replace(" ", "");
             string comment = table.Rows[0][9].ToString();
             string commentnospaces = comment.Replace(" ", "");
+            string SendDate = table.Rows[0][3].ToString();
+            string SendTime = table.Rows[0][4].ToString();
+            string documentid = table.Rows[0][6].ToString();
+            ClientSession.documentid = documentid;
+
             label1.Text = themenospaces;
             label2.Text = commentnospaces;
+            label3.Text = SendDate;
+            label4.Text = SendTime;
+            
+
         }
 
 
@@ -52,6 +59,16 @@ namespace WindowsFormsApp1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Sign sign = new Sign();
+            sign.Show();
+            Hide();
+
+
 
         }
     }

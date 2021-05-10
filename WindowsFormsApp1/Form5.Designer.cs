@@ -33,19 +33,15 @@ namespace WindowsFormsApp1
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.workersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-     
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
-
             this.proektDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vacationBindingSource = new System.Windows.Forms.BindingSource(this.components);
-
             this.proektDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.vacationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -55,7 +51,6 @@ namespace WindowsFormsApp1
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).BeginInit();
-
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vacationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSetBindingSource1)).BeginInit();
@@ -74,11 +69,6 @@ namespace WindowsFormsApp1
             // workersBindingSource
             // 
             this.workersBindingSource.DataMember = "Workers";
- 
-            // 
-            // proektDataSet1
-            // 
- 
             // 
             // label1
             // 
@@ -124,41 +114,14 @@ namespace WindowsFormsApp1
             this.label2.TabIndex = 9;
             this.label2.Text = "Комментарий";
             // 
-            // proektDataSet
-            // 
-
-            // 
-            // proektDataSetBindingSource
-            // 
-       
-            this.proektDataSetBindingSource.Position = 0;
-            // 
             // vacationBindingSource
             // 
             this.vacationBindingSource.DataMember = "Vacation";
             this.vacationBindingSource.DataSource = this.proektDataSetBindingSource;
             // 
-            // vacationTableAdapter
-            // 
- 
-            // 
-            // proektDataSetBindingSource1
-            // 
-           
-            this.proektDataSetBindingSource1.Position = 0;
-            // 
             // vacationsBindingSource
             // 
             this.vacationsBindingSource.DataMember = "Vacations";
- 
-            // 
-            // vacationsTableAdapter
-            // 
-   
-            // 
-            // workersTableAdapter
-            // 
-
             // 
             // button1
             // 
@@ -220,9 +183,8 @@ namespace WindowsFormsApp1
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(153, 87);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(0, 13);
             this.label3.TabIndex = 15;
-            this.label3.Text = "label3";
             // 
             // Form5
             // 
@@ -245,9 +207,8 @@ namespace WindowsFormsApp1
             this.Text = "Отправить письмо";
             this.Load += new System.EventHandler(this.Form5_Load);
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).EndInit();
-
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vacationBindingSource)).EndInit();
+          
             ((System.ComponentModel.ISupportInitialize)(this.proektDataSetBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vacationsBindingSource)).EndInit();
             this.ResumeLayout(false);

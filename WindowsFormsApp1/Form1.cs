@@ -54,8 +54,8 @@ namespace WindowsFormsApp1
                     adapter.Fill(table2);
                     string ShortUserName = table2.Rows[0][2].ToString();
 
-                    tableLayoutPanel1.Controls.Add(new Label { Text = themenospaces + "\r\n" + "\r\n" + ShortUserName + "\r\n" + commentnospaces, Name = "LinkClick" + id, Tag = i, Size = new Size(353, 78), BorderStyle = BorderStyle.FixedSingle, });
-                    tableLayoutPanel1.Controls.Add(new Button { Name = "buttonclick" + id, BackgroundImage = WindowsFormsApp1.Properties.Resources.z00SzkeG89Q } );
+                    tableLayoutPanel1.Controls.Add(new Label { Text = themenospaces + "\r\n" + "\r\n" + ShortUserName + "\r\n" + commentnospaces, Name = "LinkClick" + id, Tag = i, Size = new Size(353, 78), BorderStyle = BorderStyle.FixedSingle });
+                    tableLayoutPanel1.Controls.Add(new Button { Name = "buttonclick" + id, BackgroundImage = WindowsFormsApp1.Properties.Resources.z00SzkeG89Q, Size = new Size(16, 20) } );
                     (tableLayoutPanel1.Controls["LinkClick" + id] as Label).Click += OpenMy;
                     (tableLayoutPanel1.Controls["buttonclick" + id] as Button).Click += DeleteMy;
                  
@@ -88,6 +88,7 @@ namespace WindowsFormsApp1
         {
             Letter form7 = new Letter();
             form7.Show();
+            Hide();
             Label btn = sender as Label;
             textBox1.Text = btn.Name;
             string s = btn.Name;

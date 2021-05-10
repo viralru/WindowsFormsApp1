@@ -13,6 +13,8 @@ namespace WindowsFormsApp1
 {
     public partial class Form5 : Form
     {
+        public static string DocumentText;
+
         public Form5()
         {
             InitializeComponent();
@@ -102,13 +104,18 @@ namespace WindowsFormsApp1
 
             adapter.SelectCommand = command;
             adapter.Fill(table);
-            // подумать о генерации ключа
-            /*SqlCommand command1 = new SqlCommand("INSERT INTO LettersOfWorkers(id, id_letter, id_worker) VALUES(@UID, @UID, @URecipient)", db.GetConnection());
-            command1.Parameters.Add("@UID", SqlDbType.Int).Value = NewID;
-            command1.Parameters.Add("@USender", SqlDbType.Int).Value = Convert.ToInt32(ClientSession.iduser);
-            command1.Parameters.Add("@URecipient", SqlDbType.Int).Value = Convert.ToInt32(id_recip);
+            string Link = "C:/Users/Viral/OneDrive/Рабочий стол/Тестовая папка для писем/document" + NewID + ".txt";
+            File.WriteAllText(Link, DocumentText);
+           
+            SqlCommand command1 = new SqlCommand("INSERT INTO Documents(id, Name,CreationDate,CreationTime,Link) VALUES(@LID,@LName,@LCreationDate,@LCreationTime,@LLink)", db.GetConnection());
+            command1.Parameters.Add("@LID", SqlDbType.Int).Value = NewID;
+            command1.Parameters.Add("@LName", SqlDbType.VarChar).Value = richTextBox1.Text;
+            command1.Parameters.Add("@LCreationDate", SqlDbType.Date).Value = "2021-05-11";
+            command1.Parameters.Add("@LCreationTime", SqlDbType.Time).Value = "02:45:36";
+            command1.Parameters.Add("@LLink", SqlDbType.VarChar).Value = Link;
+            //command1.Parameters.Add("@LDID", SqlDbType.Int).Value = NewID;
             adapter.SelectCommand = command1;
-            adapter.Fill(table1);*/
+            adapter.Fill(table1);
 
         }
 
@@ -122,11 +129,10 @@ namespace WindowsFormsApp1
             label3.Text = filename;
             // читаем файл в строку
             string fileText = System.IO.File.ReadAllText(filename);
-            string DocumentText = fileText;
-            richTextBox2.Text = DocumentText;
+            DocumentText = fileText;
             label3.Text = filename;
-            MessageBox.Show("Файл сохранен");
-            // добавить отправку в бд текста и разобраться как конвертить pdf в текст
+            
+
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)

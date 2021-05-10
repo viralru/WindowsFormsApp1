@@ -11,5 +11,8 @@ namespace WindowsFormsApp1
         public static string letter;
         public static string UserName;
         public static string iduser;
+        public static string documentid;
+        public static string idletter;
+
     }
 }
