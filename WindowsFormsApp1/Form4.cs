@@ -42,6 +42,8 @@ namespace WindowsFormsApp1
                     string id_status = table.Rows[i][10].ToString();
                     string statusSigned = table.Rows[i][7].ToString();
                     string id = table.Rows[i][0].ToString();
+                    string SendDate = table.Rows[i][3].ToString();
+                    string SendTime = table.Rows[i][4].ToString();
 
 
 
@@ -54,9 +56,10 @@ namespace WindowsFormsApp1
 
                     string ShortUserName = table2.Rows[0][2].ToString();
 
-                    tableLayoutPanel1.Controls.Add(new Label { Text = themenospaces + "\r\n" + "\r\n" + ShortUserName + "\r\n" + commentnospaces, Name = "LinkClick" + id, Tag = i, Size = new Size(353, 78), BorderStyle = BorderStyle.FixedSingle }); ;
+                    tableLayoutPanel1.Controls.Add(new Label { Text = themenospaces + "\r\n" + ShortUserName + "\r\n" + commentnospaces + "\r\n" + SendDate + " " + SendTime, Name = "LinkClick" + id, Tag = i, Size = new Size(353, 78), BorderStyle = BorderStyle.FixedSingle });
                     tableLayoutPanel1.Controls.Add(new Button { Name = "buttonclick" + id, BackgroundImage = WindowsFormsApp1.Properties.Resources.z00SzkeG89Q, Size = new Size(16, 20) });
-
+                    (tableLayoutPanel1.Controls["LinkClick" + id] as Label).Click += OpenMy;
+                    (tableLayoutPanel1.Controls["buttonclick" + id] as Button).Click += DeleteMy;
                     if (statusSigned == "2")
                     {
                         bool Signed = true;
@@ -191,6 +194,8 @@ namespace WindowsFormsApp1
                     string id_status = table.Rows[i][10].ToString();
                     string statusSigned = table.Rows[i][7].ToString();
                     string id = table.Rows[i][0].ToString();
+                    string SendDate = table.Rows[i][3].ToString();
+                    string SendTime = table.Rows[i][4].ToString();
 
 
 
@@ -203,7 +208,7 @@ namespace WindowsFormsApp1
 
                     string ShortUserName = table2.Rows[0][2].ToString();
 
-                    tableLayoutPanel1.Controls.Add(new Label { Text = themenospaces + "\r\n" + "\r\n" + ShortUserName + "\r\n" + commentnospaces, Name = "LinkClick" + id, Tag = i, Size = new Size(353, 78), BorderStyle = BorderStyle.FixedSingle }); ;
+                    tableLayoutPanel1.Controls.Add(new Label { Text = themenospaces + "\r\n" + ShortUserName + "\r\n" + commentnospaces + "\r\n" + SendDate + " " + SendTime, Name = "LinkClick" + id, Tag = i, Size = new Size(353, 78), BorderStyle = BorderStyle.FixedSingle });
                     tableLayoutPanel1.Controls.Add(new Button { Name = "buttonclick" + id, BackgroundImage = WindowsFormsApp1.Properties.Resources.z00SzkeG89Q, Size = new Size(16, 20) });
                     (tableLayoutPanel1.Controls["LinkClick" + id] as Label).Click += OpenMy;
                     (tableLayoutPanel1.Controls["buttonclick" + id] as Button).Click += DeleteMy;

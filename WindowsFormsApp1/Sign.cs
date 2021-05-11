@@ -12,6 +12,7 @@ namespace WindowsFormsApp1
         public static Boolean SignType;
         public static string documentid;
         public static string DeclineReason;
+        public static int StatusSign;
         public Sign()
         {
             InitializeComponent();
@@ -59,12 +60,13 @@ namespace WindowsFormsApp1
             {
                 DeclineReason = Comment;
             }
-            SqlCommand command1 = new SqlCommand("Update Letters SET IsSigned = @IsSigned WHERE id=@UID", db.GetConnection());
+            SqlCommand command1 = new SqlCommand("Update Letters SET IsSigned = @IsSigned, id_status = @Status WHERE id=@UID", db.GetConnection());
             
             command1.Parameters.Add("@UID", SqlDbType.VarChar).Value = ClientSession.idletter;
             //command1.Parameters.Add("@DeclineReason", SqlDbType.VarChar).Value = DeclineReason;
-            command1.Parameters.Add("@IsSigned", SqlDbType.Bit).Value = SignType = true;
-            ;
+            command1.Parameters.Add("@IsSigned", SqlDbType.Bit).Value = true;
+            command1.Parameters.Add("@Status", SqlDbType.Int).Value = 2;
+
 
             adapter.SelectCommand = command1;
             adapter.Fill(table1);
@@ -84,6 +86,7 @@ namespace WindowsFormsApp1
         private void button3_Click(object sender, EventArgs e)
         {
             SignType = true;
+            StatusSign = 2;
             button2.Enabled = true;
         }
 
