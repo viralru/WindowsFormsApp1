@@ -64,12 +64,27 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
+
+            DB db = new DB();
+            DataTable table = new DataTable();
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            SqlCommand command1 = new SqlCommand("Update Letters SET IsWritten = @IsWritten WHERE id=@UID", db.GetConnection());
+
+            command1.Parameters.Add("@UID", SqlDbType.VarChar).Value = ClientSession.idletter;
+            command1.Parameters.Add("@IsWritten", SqlDbType.Bit).Value = true;
+
             Sign sign = new Sign();
             sign.Show();
             Hide();
 
+        }
 
-
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
+            Hide();
         }
     }
 

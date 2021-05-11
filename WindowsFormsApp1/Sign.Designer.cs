@@ -62,9 +62,11 @@ namespace WindowsFormsApp1
             this.button1.TabIndex = 1;
             this.button1.Text = "Назад";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            this.button2.Enabled = false;
             this.button2.Location = new System.Drawing.Point(194, 384);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
@@ -82,6 +84,7 @@ namespace WindowsFormsApp1
             this.button3.TabIndex = 3;
             this.button3.Text = "Подписать";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -92,6 +95,7 @@ namespace WindowsFormsApp1
             this.button4.TabIndex = 4;
             this.button4.Text = "Отклонить";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label2
             // 

@@ -17,8 +17,11 @@ namespace WindowsFormsApp1
             DataTable table = new DataTable();
 
             SqlDataAdapter adapter = new SqlDataAdapter();
-            SqlCommand command = new SqlCommand("Select * from Letters where id_Recipient LIKE @UID", db.GetConnection());
+            SqlCommand command = new SqlCommand("Select * from Letters where id_Recipient=@UID AND isSigned = @isSigned AND IsinTrash = @isInTrash  AND IsInDrafts = @isInDrafts", db.GetConnection());
             command.Parameters.Add("@UID", SqlDbType.VarChar).Value = userid;
+            command.Parameters.Add("@isSigned", SqlDbType.Bit).Value = 0;
+            command.Parameters.Add("@isInTrash", SqlDbType.Bit).Value = 0;
+            command.Parameters.Add("@isInDrafts", SqlDbType.Bit).Value = 0;
             adapter.SelectCommand = command;
             adapter.Fill(table);
             int Rowscount = table.Rows.Count;
@@ -35,6 +38,8 @@ namespace WindowsFormsApp1
                     string id_status = table.Rows[i][10].ToString();
                     string statusSigned = table.Rows[i][7].ToString();
                     string id = table.Rows[i][0].ToString();
+                    string SendDate = table.Rows[i][3].ToString();
+                    string SendTime = table.Rows[i][4].ToString();
                     if (id_status == "True")
                     {   
                         bool Written = true;
@@ -49,12 +54,13 @@ namespace WindowsFormsApp1
                    
                     SqlCommand newcommand = new SqlCommand("Select * from Workers where id = @UIDU", db.GetConnection());
                     newcommand.Parameters.Add("@UIDU", SqlDbType.VarChar).Value = id_recipient;
+
                     DataTable table2 = new DataTable();
                     adapter.SelectCommand = newcommand;
                     adapter.Fill(table2);
                     string ShortUserName = table2.Rows[0][2].ToString();
 
-                    tableLayoutPanel1.Controls.Add(new Label { Text = themenospaces + "\r\n" + "\r\n" + ShortUserName + "\r\n" + commentnospaces, Name = "LinkClick" + id, Tag = i, Size = new Size(353, 78), BorderStyle = BorderStyle.FixedSingle });
+                    tableLayoutPanel1.Controls.Add(new Label { Text = themenospaces + "\r\n" + ShortUserName + "\r\n" + commentnospaces + "\r\n" + SendDate + " " + SendTime, Name = "LinkClick" + id, Tag = i, Size = new Size(353, 78), BorderStyle = BorderStyle.FixedSingle });
                     tableLayoutPanel1.Controls.Add(new Button { Name = "buttonclick" + id, BackgroundImage = WindowsFormsApp1.Properties.Resources.z00SzkeG89Q, Size = new Size(16, 20) } );
                     (tableLayoutPanel1.Controls["LinkClick" + id] as Label).Click += OpenMy;
                     (tableLayoutPanel1.Controls["buttonclick" + id] as Button).Click += DeleteMy;
@@ -90,7 +96,6 @@ namespace WindowsFormsApp1
             form7.Show();
             Hide();
             Label btn = sender as Label;
-            textBox1.Text = btn.Name;
             string s = btn.Name;
             ClientSession.letter = s;
 
@@ -98,7 +103,21 @@ namespace WindowsFormsApp1
         }
         private void DeleteMy(object sender, EventArgs e)
         {
-           
+            Button btn = sender as Button;
+            string s = btn.Name;
+            ClientSession.letter = s;
+            String letterid = ClientSession.letter;
+            ClientSession.idletter = letterid.Replace("buttonclick", "");
+            textBox1.Text = ClientSession.idletter;
+            DB db = new DB();
+            DataTable table = new DataTable();
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            SqlCommand command = new SqlCommand("Update Letters SET IsInTrash = @IsinTrash  WHERE id=@UID", db.GetConnection());
+            command.Parameters.Add("@IsinTrash", SqlDbType.VarChar).Value = 1;
+            command.Parameters.Add("@UID", SqlDbType.VarChar).Value = ClientSession.idletter;
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -186,8 +205,11 @@ namespace WindowsFormsApp1
             DataTable table = new DataTable();
 
             SqlDataAdapter adapter = new SqlDataAdapter();
-            SqlCommand command = new SqlCommand("Select * from Letters where id_Recipient LIKE @UID AND Theme LIKE @USearch", db.GetConnection());
+            SqlCommand command = new SqlCommand("Select * from Letters where id_Recipient=@UID AND isSigned = @isSigned AND IsinTrash = @isInTrash  AND IsInDrafts = @isInDrafts AND Theme LIKE @USearch", db.GetConnection());
             command.Parameters.Add("@UID", SqlDbType.VarChar).Value = userid;
+            command.Parameters.Add("@isSigned", SqlDbType.Bit).Value = 0;
+            command.Parameters.Add("@isInTrash", SqlDbType.Bit).Value = 0;
+            command.Parameters.Add("@isInDrafts", SqlDbType.Bit).Value = 0;
             command.Parameters.Add("@USearch", SqlDbType.VarChar).Value = textBox1.Text + "%";
             adapter.SelectCommand = command;
             adapter.Fill(table);
@@ -224,9 +246,9 @@ namespace WindowsFormsApp1
                     adapter.Fill(table2);
                     string ShortUserName = table2.Rows[0][2].ToString();
 
-                    tableLayoutPanel1.Controls.Add(new LinkLabel { Text = themenospaces + "\r\n" + "\r\n" + ShortUserName + "\r\n" + commentnospaces, Name = "LinkClick" + id, Tag = i, Size = new Size(80, 80) }); ;
-                    tableLayoutPanel1.Controls.Add(new Button { Name = "buttonclick" + id, BackgroundImage = WindowsFormsApp1.Properties.Resources.z00SzkeG89Q });
-                    (tableLayoutPanel1.Controls["LinkClick" + id] as LinkLabel).Click += OpenMy;
+                    tableLayoutPanel1.Controls.Add(new Label { Text = themenospaces + "\r\n" + "\r\n" + ShortUserName + "\r\n" + commentnospaces, Name = "LinkClick" + id, Tag = i, Size = new Size(353, 78), BorderStyle = BorderStyle.FixedSingle });
+                    tableLayoutPanel1.Controls.Add(new Button { Name = "buttonclick" + id, BackgroundImage = WindowsFormsApp1.Properties.Resources.z00SzkeG89Q, Size = new Size(16, 20) });
+                    (tableLayoutPanel1.Controls["LinkClick" + id] as Label).Click += OpenMy;
                     (tableLayoutPanel1.Controls["buttonclick" + id] as Button).Click += DeleteMy;
                     TableLayoutRowStyleCollection styles =
                     this.tableLayoutPanel1.RowStyles;

@@ -8,7 +8,10 @@ namespace WindowsFormsApp1
 {
     public partial class Sign : Form
     {
+        public static string Comment;
+        public static Boolean SignType;
         public static string documentid;
+        public static string DeclineReason;
         public Sign()
         {
             InitializeComponent();
@@ -35,7 +38,67 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
+            DB db = new DB();
+            DataTable table = new DataTable();
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            SqlCommand command = new SqlCommand("Update Documents SET Signs = @IsSigned  WHERE id=@UID", db.GetConnection());
+            command.Parameters.Add("@IsSigned", SqlDbType.VarChar).Value = ClientSession.iduser;
+            command.Parameters.Add("@UID", SqlDbType.VarChar).Value = ClientSession.idletter;
+
            
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+        
+            DataTable table1 = new DataTable();
+            if (Comment == "")
+            {
+                DeclineReason = "Подписано";
+            }
+            else
+            {
+                DeclineReason = Comment;
+            }
+            SqlCommand command1 = new SqlCommand("Update Letters SET IsSigned = @IsSigned WHERE id=@UID", db.GetConnection());
+            
+            command1.Parameters.Add("@UID", SqlDbType.VarChar).Value = ClientSession.idletter;
+            //command1.Parameters.Add("@DeclineReason", SqlDbType.VarChar).Value = DeclineReason;
+            command1.Parameters.Add("@IsSigned", SqlDbType.Bit).Value = SignType = true;
+            ;
+
+            adapter.SelectCommand = command1;
+            adapter.Fill(table1);
+            Form1 form1 = new Form1();
+            form1.Show();
+            Hide();
+
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Letter letter = new Letter();
+            letter.Show();
+            Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SignType = true;
+            button2.Enabled = true;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SignType = false;
+            if(richTextBox1.Text=="")
+            {
+                MessageBox.Show("Заполните комментарий");
+            }
+            else
+            {
+                Comment = richTextBox1.Text;
+                button2.Enabled = true;
+            }
+    }
     }
 }
